@@ -1,0 +1,2 @@
+class WatchPartiesController < ApplicationController
+end

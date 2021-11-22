@@ -4,7 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :attendee, :watch_party, :review
+  has_many :watch_parties
+  has_many :attendees
+  has_many :reviews
 
   validates :name, presence: true, uniqueness: true
   validates :email, presence: true
