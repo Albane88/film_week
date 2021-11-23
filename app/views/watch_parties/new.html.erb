@@ -1,7 +1,6 @@
 <%= simple_form_for(@watch_party) do |f| %>
-  <%= f.input :id_movie %>
+  <%= f.association :movie %>
   <%= f.input :location %>
-  <%= f.input :id_user %>
   <%= f.input :date %>
   <%= f.submit %>
 <% end %>
