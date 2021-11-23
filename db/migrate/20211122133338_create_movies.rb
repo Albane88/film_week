@@ -7,7 +7,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.text :synopsis
       t.integer :rating
       t.string :movie_url
-      t.integer :id_movie_date
+      t.references :movie_date
 
       t.timestamps
     end
