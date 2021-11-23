@@ -3,8 +3,8 @@ class CreateWatchParties < ActiveRecord::Migration[6.0]
     create_table :watch_parties do |t|
       t.date :date
       t.string :location
-      t.integer :id_movie
-      t.integer :id_user
+      t.references :movie
+      t.references :user
 
       t.timestamps
     end
