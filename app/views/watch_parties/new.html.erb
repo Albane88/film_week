@@ -1,0 +1,20 @@
+<%= simple_form_for(@watch_party) do |f| %>
+  <%= f.input :id_movie %>
+  <%= f.input :location %>
+  <%= f.input :id_user %>
+  <%= f.input :date %>
+  <%= f.submit %>
+<% end %>
+
+<form class="simple_form new_watchparty" id="new_watchparty" novalidate="novalidate" action="/watchparties" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="6mcCvU7ZazpIBcJTptw/8y4EucmzccFWli7tFUzX6IJEx8wq6PFC7m4rA1Jy+W4YW1hlhYhSOyhZefWtOM5ofQ==">
+  <div class="form-group string optional watchparty_name">
+    <label class="string optional" for="restaurant_name">Name</label>
+    <input class="form-control string optional" type="text" name="restaurant[name]" id="restaurant_name">
+  </div>
+  <div class="form-group string optional restaurant_address">
+    <label class="string optional" for="restaurant_address">Address</label>
+    <input class="form-control string optional" type="text" name="restaurant[address]" id="restaurant_address">
+  </div>
+  <input type="submit" name="commit" value="Create Restaurant" data-disable-with="Create Restaurant">
+</form>
