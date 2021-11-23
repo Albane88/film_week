@@ -6,10 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-<<<<<<< HEAD
 
-WatchParty.create(date: "06/12/2021", location: "Charleroi", id_movie: 1)
-=======
+WatchParty.create(date: "06/12/2021", location: "Charleroi")
 movie_date = MovieDate.create(start_date: Date.today, end_date: Date.today+7.days)
 
 Movie.create!(
@@ -21,4 +19,3 @@ Movie.create!(
   movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
   movie_date: movie_date
 )
->>>>>>> master
