@@ -10,23 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_140053) do
+ActiveRecord::Schema.define(version: 2021_11_22_135753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "attendees", force: :cascade do |t|
-    t.integer "id_user"
-    t.integer "id_watch_party"
+    t.bigint "user_id"
+    t.bigint "atch_party_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["atch_party_id"], name: "index_attendees_on_atch_party_id"
+    t.index ["user_id"], name: "index_attendees_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
-    t.integer "id_attendee"
+    t.bigint "attendee_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["attendee_id"], name: "index_messages_on_attendee_id"
   end
 
   create_table "movie_dates", force: :cascade do |t|
@@ -43,17 +46,20 @@ ActiveRecord::Schema.define(version: 2021_11_22_140053) do
     t.text "synopsis"
     t.integer "rating"
     t.string "movie_url"
-    t.integer "id_movie_date"
+    t.bigint "movie_date_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_date_id"], name: "index_movies_on_movie_date_id"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "id_movie"
-    t.integer "id_user"
+    t.bigint "movie_id"
+    t.bigint "user_id"
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_reviews_on_movie_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,10 +77,12 @@ ActiveRecord::Schema.define(version: 2021_11_22_140053) do
   create_table "watch_parties", force: :cascade do |t|
     t.date "date"
     t.string "location"
-    t.integer "id_movie"
-    t.integer "id_user"
+    t.bigint "movie_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_watch_parties_on_movie_id"
+    t.index ["user_id"], name: "index_watch_parties_on_user_id"
   end
 
 end

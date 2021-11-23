@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+movie_date = MovieDate.create(start_date: Date.today, end_date: Date.today+7.days)
 
-
-Movie.create!(title: 'test1', Movie_date.create!(start_date: Time.now, end_date: 7.days.from_now))
-Movie.create!(title: 'test2')
-Movie.create!(title: 'test3')
-Movie.create!(title: 'test4')
-Movie.create!(title: 'test5')
-Movie.create!(title: 'test6')
-Movie.create!(title: 'test7')
+Movie.create!(
+  title: "Titanic",
+  overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.",
+  synopsis: "Seventeen-year-old Rose hails from an aristocratic family and is set to be married.
+              she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",
+  rating: 7.9,
+  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+  movie_date: movie_date
+)
