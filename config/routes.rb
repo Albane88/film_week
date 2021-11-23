@@ -13,3 +13,4 @@ Rails.application.routes.draw do
   post "movie/id/reviews", to: "reviews#create",
   get "home", to: "homepages#home"
 end
+end
