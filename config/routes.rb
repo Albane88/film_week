@@ -17,4 +17,3 @@ Rails.application.routes.draw do
    end
    resources :watch_parties, only: [:new, :create, :show, :index]
 end
-S

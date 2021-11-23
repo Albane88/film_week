@@ -4,7 +4,7 @@
       <h2 class="text-center">Find a watch party in your neighbourhood</h2>
       <p class="text-center">Good movies for good people</p>
        <div id="map" style="width: 100%; height: 600px;" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      <%= link_to "Start your watch party", watch_parties_new_path, class:"btn btn-primary" %>
+      <%= link_to "Start your watch party", new_watch_party_path, class:"btn btn-primary" %>
       </div>
 
 
@@ -16,10 +16,10 @@
               <div class="box">
                 <div class= "profil">
                   <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
-                    <h2><%= watch_party.movie.title %></h2>
+                    <h2><%= link_to watch_party.movie.title, movie_path(watch_party.movie_id) %></h2>
                     <p><%= watch_party.date %></p>
                     <p><%= watch_party.location %></p>
-                    <%= link_to watch_parties_attendees_path, class:"btn btn-primary" %>
+                    <%#= link_to watch_parties_attendees_path, class:"btn btn-primary" %>
                 </div>
                 </div>
             <% end %>
