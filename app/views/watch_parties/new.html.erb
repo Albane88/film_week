@@ -1,0 +1,6 @@
+<%= simple_form_for(@watch_party) do |f| %>
+  <%= f.association :movie %>
+  <%= f.input :location %>
+  <%= f.input :date %>
+  <%= f.submit %>
+<% end %>
