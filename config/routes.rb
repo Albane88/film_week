@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'homepages#dashboard', as: :dashboard
   # get 'movies/id', to: 'movies#show'
   # get 'movies/id/trailer', to: 'movies#show'
-  # get 'watch-parties', to: 'watch_parties#show'
   # post 'watch-parties/attendees', to: 'attendees#create'
   # get 'watch-parties/new', to: 'watch_parties#new'
   # post 'messages', to: 'messages#create'
