@@ -1,1 +1,30 @@
-<h1>hello</h1>
+<div class="movie-gif" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('<%= image_path "titanic.gif" %>');">
+</div>
+
+<div class="container">
+  <header class="header-info">
+    <h1>
+      Discover
+      <span>
+        <%= @movie.title %>
+      </span>
+    </h1>
+  </header>
+  <div>
+    <%= link_to "Play", "#", class: "btn btn-ghost" %>
+  </div>
+</div>
+
+<main class="movie-info">
+
+  <p><%= @movie.overview %></p>
+  <br>
+  <p><%= @movie.synopsis %></p>
+  <br>
+  <p><%= @movie.rating %></p>
+  <br>
+  <p><%= @movie.movie_url %></p>
+  <br>
+  <p><%= @movie.review%></p>
+
+</main>
