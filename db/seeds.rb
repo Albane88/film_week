@@ -15,8 +15,8 @@ m = Movie.create!(
               she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",
   rating: 7.9,
   movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date.id
-)
+  movie_date_id: movie_date.id)
+
 
 
 u = User.create(email: 'jd@oui.com', password: '123123')
