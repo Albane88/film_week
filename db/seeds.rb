@@ -1,10 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
+
 Movie.destroy_all
 WatchParty.destroy_all
 User.destroy_all
@@ -18,75 +13,90 @@ movie_date_5 = MovieDate.create!(start_date: Date.today-3.days, end_date: Date.t
 movie_date_6 = MovieDate.create!(start_date: Date.today-2.days, end_date: Date.today+5.days)
 movie_date_7 = MovieDate.create!(start_date: Date.today-1.day, end_date: Date.today+6.days)
 
+# pic1 = URI.open('https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Shame_fn2ylj.jpg')
 
 m1 = Movie.create!(
-  title: "Titanic",
-  overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.
-  James Cameron's Titanic is an epic, action-packed romance set against the ill-fated maiden
-  voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time,
-  the largest moving object ever built. She was the most luxurious liner of her era --
-  the ship of dreams -- which ultimately carried over 1,500 people to their death in the
-  ice cold waters of the North Atlantic in the early hours of April 15, 1912.",
-  synopsis: "Seventeen-year-old Rose hails from an aristocratic family and is set to be married.
-            She boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",
-
+  title: "Shame",
+  overview: "coming soon",
+  synopsis: "Successful and handsome New Yorker Brandon seems to live an ordinary life, but he hides
+   a terrible secret behind his mask of normalcy: Brandon is a sex addict. His constant need for gratification numbs him
+   to just about everything else. But, when Sissy, Brandon's needy sister, unexpectedly blows into town,
+   crashes at his apartment and invades his privacy, Brandon is finally forced to confront his addiction head-on.",
   rating: 7.9,
-  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date_1.id
+  movie_url: "insert trailer link",
+  movie_date_id: movie_date_1.id,
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Shame_fn2ylj.jpg"
 )
+# m1.photo.attach(io: pic1, filename: 'shame.png', content_type: 'image/png')
 
 m2 = Movie.create!(
-  title: "The Godfather",
+  title: "Inherent Vice",
   overview: "coming soon",
-  synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+  synopsis: "Doc, a private investigator, is visited by his former flame who suspects
+  the wife of her current beau is plotting to institutionalise him. Doc takes on the
+   case hoping to solve it.",
   rating: 8.9,
-  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date_2.id
+  movie_url: "insert trailer link",
+  movie_date_id: movie_date_2.id,
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Inherent_Vice_w4jg8s.jpg"
 )
 
 m3 = Movie.create!(
-  title: "Bambi",
+  title: "Goodbye First Love",
   overview: "coming soon",
-  synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+  synopsis: "15-year-old Camille and 19-year-old Sullivan are in love for the first
+  time. However, when Sullivan goes to Latin America on a journey of self-discovery,
+  Camille is consumed by melancholy and longing for Sullivan, and she struggles to move on.",
   rating: 8.9,
-  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date_3.id
+  movie_url: "insert trailer link",
+  movie_date_id: movie_date_3.id,
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766040/Images%20FilmWeek%20App%20Le%20Wagon/Goodbye_First_Love_s3eptp.jpg"
 )
 
 m4 = Movie.create!(
-  title: "Dune",
+  title: "Happening",
   overview: "coming soon",
-  synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+  synopsis: "A young woman in 1960s France battles physically and emotionally to
+  access illegal abortion in a race against the clock.",
   rating: 8.9,
-  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date_4.id
+  movie_url: "insert trailer link",
+  movie_date_id: movie_date_4.id,
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Happening_Audrey_Diwan_tqbxh2.jpg"
 )
 
 m5 = Movie.create!(
-  title: "Ghostbusters",
+  title: "National Gallery",
   overview: "coming soon",
-  synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+  synopsis: "This documentary goes inside and examines one of the great museums
+  of the modern world, The National Gallery in London.",
   rating: 8.9,
-  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date_5.id
+  movie_url: "insert trailer link",
+  movie_date_id: movie_date_5.id,
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/National_Gallery_Frederick_Wiseman_lb6qvr.jpg"
 )
 
 m6 = Movie.create!(
-  title: "Jurassic Park",
+  title: "Oldboy",
   overview: "coming soon",
-  synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+  synopsis: "A man, held captive for no apparent reason for years, is given a cell
+  phone, money and expensive clothes and released. Unless he finds out the identity
+  of his captor, an even worse fate awaits him.",
   rating: 8.9,
-  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date_6.id
+  movie_url: "insert trailer link",
+  movie_date_id: movie_date_6.id,
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Oldboy_zzzrhd.jpg"
 )
 
 m7 = Movie.create!(
-  title: "Old Boy",
+  title: "Climax",
   overview: "coming soon",
-  synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+  synopsis: "A group of French dancers gathers in an empty school to rehearse and party.
+  However, their celebration soon turns into a nightmare when they realise that their drinks
+  are spiked with LSD.",
   rating: 8.9,
-  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
-  movie_date_id: movie_date_7.id
+  movie_url: "insert trailer link",
+  movie_date_id: movie_date_7.id,
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg"
 )
 
 u = User.create!(email: 'jd@oui.com', password: '123123')
