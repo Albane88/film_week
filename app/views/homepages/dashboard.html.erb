@@ -7,10 +7,9 @@
   </div>
 </div>
 
-
-
 <div class="movie-list">
-  <% @movies.each do |movie| %>
+  <% @movies.sort_by { |x| x.movie_date.start_date}.reverse.each do |movie| %>
+  <% unless movie == @movies.last %>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
@@ -23,6 +22,7 @@
     </div>
       </div>
     </div>
+    <% end %>
   <% end %>
 </div>
 
