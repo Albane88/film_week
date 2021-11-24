@@ -10,21 +10,13 @@ movie_date = MovieDate.create!(start_date: Date.today, end_date: Date.today+7.da
 
 m = Movie.create!(
   title: "Titanic",
-
-  overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.
-  James Cameron's Titanic is an epic, action-packed romance set against the ill-fated maiden
-  voyage of the R.M.S. Titanic; the pride and joy of the White Star Line and, at the time,
-  the largest moving object ever built. She was the most luxurious liner of her era --
-  the ship of dreams -- which ultimately carried over 1,500 people to their death in the
-  ice cold waters of the North Atlantic in the early hours of April 15, 1912.",
-
+  overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.",
   synopsis: "Seventeen-year-old Rose hails from an aristocratic family and is set to be married.
-            She boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",
-
+              she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",
   rating: 7.9,
-
   movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
   movie_date_id: movie_date.id)
+
 
 
 u = User.create(email: 'jd@oui.com', password: '123123')
