@@ -5,7 +5,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.text :review
       t.text :overview
       t.text :synopsis
-      t.integer :rating
+      t.float :rating
       t.string :movie_url
       t.references :movie_date
 
