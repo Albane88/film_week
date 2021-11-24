@@ -1,4 +1,14 @@
 // Specific CSS for your home-page
+
+.header h1 {
+  color: black;
+  font-size: 80px;
+}
+
+.header p {
+  color: black;
+  font-size: 30px;
+
 * {
   margin: 0;
   padding: 0;
@@ -165,4 +175,5 @@ li{
   opacity: 1;
   color: orangered;
   text-decoration: none;
+
 }
