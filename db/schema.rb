@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 2021_11_23_115011) do
 
   create_table "attendees", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "atch_party_id"
+    t.bigint "watch_party_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["atch_party_id"], name: "index_attendees_on_atch_party_id"
     t.index ["user_id"], name: "index_attendees_on_user_id"
+    t.index ["watch_party_id"], name: "index_attendees_on_watch_party_id"
   end
 
   create_table "messages", force: :cascade do |t|
