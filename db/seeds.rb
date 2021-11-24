@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-movie_date = MovieDate.create(start_date: Date.today, end_date: Date.today+7.days)
+movie_date = MovieDate.create!(start_date: Date.today, end_date: Date.today+7.days)
 
-Movie.create!(
+m = Movie.create!(
   title: "Titanic",
 
   overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.
@@ -22,8 +22,13 @@ Movie.create!(
             She boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.",
 
   rating: 7.9,
-
-  movie_url: "app/assets/images/titanic.gif",
-
-  movie_date: movie_date
+  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+  movie_date_id: movie_date.id
 )
+
+
+u = User.create(email: 'jd@oui.com', password: '123123')
+
+WatchParty.create!(date: "06/12/2021", location: "Charleroi", user_id: u.id, movie_id: m.id)
+WatchParty.create!(date: "08/12/2021", location: "Charleroi", user_id: u.id, movie_id: m.id)
+WatchParty.create!(date: "09/12/2021", location: "Charleroi", user_id: u.id, movie_id: m.id)
