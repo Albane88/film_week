@@ -18,6 +18,15 @@ m = Movie.create!(
   movie_date_id: movie_date.id
 )
 
+m = Movie.create!(
+  title: "The Godfather",
+  overview: "coming soon",
+  synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+  rating: 7.9,
+  movie_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+  movie_date_id: movie_date.id
+)
+
 
 u = User.create(email: 'jd@oui.com', password: '123123')
 

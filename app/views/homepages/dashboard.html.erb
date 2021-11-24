@@ -1,40 +1,27 @@
-<h1 class="text-center">7 days - 7 films</h1>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-8">
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
+  <div class="container">
+    <h1>Film of the day</h1>
+    <p><%= @movies.last.title %> (Director, Year)</p>
+    <%= link_to "More information", "#", class: "btn btn-ghost" %>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col-12">
+<div class="movie-list">
+  <% @movies.each do |movie| %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+      <div class="card-product">
+    <img src="https://source.unsplash.com/random" />
+    <div class="card-product-infos">
+      <h2><%= movie.title %></h2>
+      <p><%= movie.synopsis %></p>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12">
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12">
-    <%= image_tag("movie1.jpg", size: '800x400') %>
+      </div>
     </div>
-  </div>
-
-  <div class="row" >
-    <div class="col-12">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12">
-    </div>
-  </div>
+  <% end %>
+</div>
 
 </div>
