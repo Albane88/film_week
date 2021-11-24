@@ -1,11 +1,13 @@
 <div class="team-boxed">
   <div class="container">
     <div class="intro">
-      <h2 class="text-center">Welcome to my watch party</h2>
+      <h2 class="text-center"> Watch party of <%= @watch_party.user.username %></h2>
        <div class="box">
                 <div class= "user-info">
                   <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
+                    <p><%= @watch_party.name %></p>
                     <p><%= @watch_party.location %></p>
+                    <p><%= @watch_party.user.email %></p>
                 </div>
                 </div>
 

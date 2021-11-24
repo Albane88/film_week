@@ -8,12 +8,17 @@ class WatchPartiesController < ApplicationController
   end
 
   def create
-    @watch_party = WatchParty.new(params[:watch_party])
-    if @watch_party.save
-      redirect_to @watch_party
+    @watch_party = WatchParty.new(watch_party_params)
+    @watch_party.user = current_user
+    if @watch_party.save!
+      redirect_to watch_party_path(@watch_party)
     else
       render "new"
     end
+  end
+
+  def watch_party_params
+    params.require(:watch_party).permit(:title, :location, :date, :name, :movie_id)
   end
 
   def show
