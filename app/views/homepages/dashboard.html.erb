@@ -7,6 +7,8 @@
   </div>
 </div>
 
+
+
 <div class="movie-list">
   <% @movies.each do |movie| %>
   <div class="container">
@@ -15,7 +17,7 @@
       <div class="card-product">
     <img src="https://source.unsplash.com/random" />
     <div class="card-product-infos">
-      <h2><%= movie.title %></h2>
+      <h2><%= link_to movie.title, movie_path(movie) %></h2>
       <p><%= movie.synopsis %></p>
     </div>
     </div>
@@ -23,5 +25,9 @@
     </div>
   <% end %>
 </div>
+
+
+
+  <h2 ><%= link_to "Discover Watch Parties", watch_parties_path, class:"btn btn-primary" %></h2>
 
 </div>

@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+WatchParty.destroy_all
+User.destroy_all
 
 movie_date = MovieDate.create!(start_date: Date.today, end_date: Date.today+7.days)
 
@@ -18,7 +20,7 @@ m = Movie.create!(
   movie_date_id: movie_date.id
 )
 
-m = Movie.create!(
+n = Movie.create!(
   title: "The Godfather",
   overview: "coming soon",
   synopsis: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
@@ -27,9 +29,8 @@ m = Movie.create!(
   movie_date_id: movie_date.id
 )
 
-
-u = User.create(email: 'jd@oui.com', password: '123123')
+u = User.create!(email: 'jd@oui.com', password: '123123')
 
 WatchParty.create!(date: "06/12/2021", location: "Charleroi", user_id: u.id, movie_id: m.id)
-WatchParty.create!(date: "08/12/2021", location: "Charleroi", user_id: u.id, movie_id: m.id)
+WatchParty.create!(date: "08/12/2021", location: "Charleroi", user_id: u.id, movie_id: n.id)
 WatchParty.create!(date: "09/12/2021", location: "Charleroi", user_id: u.id, movie_id: m.id)
