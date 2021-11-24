@@ -1,0 +1,33 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @movies.last.picture %>);">
+  <div class="container">
+    <h1>Film of the day</h1>
+    <p><%= @movies.last.title %> (Director, Year)</p>
+    <%= link_to "More information", "#", class: "btn btn-ghost" %>
+  </div>
+</div>
+
+<div class="movie-list">
+  <% @movies.sort_by { |x| x.movie_date.start_date}.reverse.each do |movie| %>
+  <% unless movie == @movies.last %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+      <div class="card-product">
+    <img src= <%= movie.picture %> />
+    <div class="card-product-infos">
+      <h2><%= link_to movie.title, movie_path(movie) %></h2>
+      <p><%= movie.synopsis %></p>
+    </div>
+    </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+  <h2 ><%= link_to "Discover Watch Parties", watch_parties_path, class:"btn btn-primary" %></h2>
+
+</div>
