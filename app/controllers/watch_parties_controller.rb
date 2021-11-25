@@ -3,10 +3,6 @@ class WatchPartiesController < ApplicationController
     @watch_party = WatchParty.new
   end
 
-  def index
-    @watch_parties = WatchParty.all
-  end
-
   def create
     @watch_party = WatchParty.new(watch_party_params)
     @watch_party.user = current_user
@@ -29,9 +25,10 @@ class WatchPartiesController < ApplicationController
     @watch_parties = WatchParty.all
     @markers = @watch_parties.geocoded.map do |watch_party|
       {
-          lat: watch_party.latitude,
-          lng: watch_party.longitude
+        lat: watch_party.latitude,
+        lng: watch_party.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { watch_party: watch_party })
       }
-      end
+    end
   end
 end
