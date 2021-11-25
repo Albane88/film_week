@@ -23,7 +23,7 @@
                     <h2><%= link_to watch_party.movie.title, movie_path(watch_party.movie_id) %></h2>
                     <p><%= watch_party.date %></p>
                     <p><%= watch_party.location %></p>
-                    <p><%= link_to "Join", watch_party_path(watch_party), class:"btn btn-primary" %></p>
+                    <p><%= link_to "Join", watch_party_attendees_path(watch_party), method: "post", class:"btn btn-primary" %></p>
                 </div>
                 </div>
             <% end %>
