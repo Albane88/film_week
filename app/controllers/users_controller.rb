@@ -1,14 +1,24 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
-  def show
-    @user = current_user
-=======
+ # before_action :check_user
+
   def index
     if params[:query].present?
       @users = User.where("location ILIKE ?", "%#{params[:query]}%")
     else
       @users = User.all
     end
->>>>>>> master
   end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+  # private
+
+  # def check_user
+  #   if current_user != @user
+  #     redirect_to root_url, alert: "Sorry, This Profile belongs to someone else !"
+  #   end
+  # end
+
 end
