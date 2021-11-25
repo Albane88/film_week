@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2021_11_25_101712) do
+=======
 ActiveRecord::Schema.define(version: 2021_11_24_155346) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +75,9 @@ ActiveRecord::Schema.define(version: 2021_11_24_155346) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "picture"
+    t.string "director"
+    t.integer "year"
+    t.string "actor"
     t.index ["movie_date_id"], name: "index_movies_on_movie_date_id"
   end
 
