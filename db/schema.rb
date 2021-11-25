@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_11_25_101712) do
-=======
-ActiveRecord::Schema.define(version: 2021_11_24_155346) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,11 +38,11 @@ ActiveRecord::Schema.define(version: 2021_11_24_155346) do
 
   create_table "attendees", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "atch_party_id"
+    t.bigint "watch_party_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["atch_party_id"], name: "index_attendees_on_atch_party_id"
     t.index ["user_id"], name: "index_attendees_on_user_id"
+    t.index ["watch_party_id"], name: "index_attendees_on_watch_party_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -99,7 +95,6 @@ ActiveRecord::Schema.define(version: 2021_11_24_155346) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
     t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
