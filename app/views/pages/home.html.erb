@@ -1,4 +1,34 @@
-<div class="header">
+<%# <div class="texth">
   <h1>Filmweek</h1>
-  <p>Thousand of movies are waiting for you.</p>
+  <p>A selection of great movies availbale anywhere, anytime </p>
 </div>
+ %>
+
+<header class="showcase">
+			<div class="showcase-top">
+				  <h1 class="logo">FILM WEEK</span> <i class="fas fa-video"></i></h1>
+        <%= link_to "Log In", user_session_path, class: "btn btn-rounded"%>
+			</div>
+			<div class="showcase-content">
+				<h1>A selection of <strong>7</strong> great movies</h1>
+				<p>Watch anywhere, anytime</p>
+        <%= link_to "SIGN UP!", new_user_registration_path, class: "btn btn-xl"%>
+			</div>
+		</header>
+
+		<section class="tabs">
+			<div class="container1">
+				<div id="tab-1" class="tab-item tab-border">
+					<i class="fas fa-ban"></i>
+					<p class="hide-sm">Cancel at any time</p>
+				</div>
+				<div id="tab-2" class="tab-item">
+					<i class="fas fa-glass-cheers"></i>
+					<p class="hide-sm">Discover watchparties</p>
+				</div>
+				<div id="tab-3" class="tab-item">
+					<i class="fas fa-comments"></i>
+					<p class="hide-sm">Chat with other movie-enthousiasts</p>
+				</div>
+			</div>
+		</section>

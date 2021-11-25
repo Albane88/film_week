@@ -8,4 +8,5 @@ class UsersController < ApplicationController
       @users = User.all
     end
   end
+>>>>>>> master
 end
