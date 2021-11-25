@@ -12,7 +12,10 @@
                 </div>
     </div>
     <div class="attendees">
-      <h3 class="text-center"> Attending <%= @watch_party.name %></h3>
+      <h3 class="text-center"> Attending: <% @watch_party.attendees.each do |attendee| %>
+        <%= attendee.user.username %>
+      <% end %>
+      </h3>
   </div>
 
 </div>
