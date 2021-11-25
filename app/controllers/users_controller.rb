@@ -8,17 +8,4 @@ class UsersController < ApplicationController
       @users = User.all
     end
   end
-
-  def show
-    @user = User.find(params[:id])
-  end
-
-  # private
-
-  # def check_user
-  #   if current_user != @user
-  #     redirect_to root_url, alert: "Sorry, This Profile belongs to someone else !"
-  #   end
-  # end
-
 end
