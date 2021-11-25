@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
- # before_action :check_user
-
+  def show
+    @user = current_user
   def index
     if params[:query].present?
       @users = User.where("location ILIKE ?", "%#{params[:query]}%")
