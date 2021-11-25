@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_11_25_101712) do
-=======
-ActiveRecord::Schema.define(version: 2021_11_24_155346) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_155346) do
     t.text "review"
     t.text "overview"
     t.text "synopsis"
-    t.float "rating"
+    t.integer "rating"
     t.string "movie_url"
     t.bigint "movie_date_id"
     t.datetime "created_at", precision: 6, null: false
