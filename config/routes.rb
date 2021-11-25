@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   # get 'home', to: 'homepages#home'
 
    resources :movies, only: [:show] do
-   resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:new, :create]
    end
-   resources :watch_parties, only: [:new, :create, :show, :index]
+   resources :watch_parties, only: [:new, :create, :show, :index] do
+    resources :attendees, only: [:create, :show]
+   end
 end

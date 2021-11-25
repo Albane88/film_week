@@ -3,10 +3,6 @@ class WatchPartiesController < ApplicationController
     @watch_party = WatchParty.new
   end
 
-  def index
-    @watch_parties = WatchParty.all
-  end
-
   def create
     @watch_party = WatchParty.new(watch_party_params)
     @watch_party.user = current_user
