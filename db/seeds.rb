@@ -26,7 +26,7 @@ m1 = Movie.create!(
    to just about everything else. But, when Sissy, Brandon's needy sister, unexpectedly blows into town,
    crashes at his apartment and invades his privacy, Brandon is finally forced to confront his addiction head-on.",
   rating: 7.9,
-  movie_url: "ttps://www.youtube.com/embed/Op9iQiB_ANI",
+  movie_url: "https://www.youtube.com/embed/Op9iQiB_ANI",
   movie_date_id: movie_date_1.id,
   review: "A must watch movie, movie's story is interesting, actors are well-play professionally.",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Shame_fn2ylj.jpg"
