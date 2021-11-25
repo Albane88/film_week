@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_155346) do
     t.text "review"
     t.text "overview"
     t.text "synopsis"
-    t.integer "rating"
+    t.float "rating"
     t.string "movie_url"
     t.bigint "movie_date_id"
     t.datetime "created_at", precision: 6, null: false
