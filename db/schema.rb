@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_11_24_152926) do
+ActiveRecord::Schema.define(version: 2021_11_25_101712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,11 +38,11 @@ ActiveRecord::Schema.define(version: 2021_11_24_152926) do
 
   create_table "attendees", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "watch_party_id"
+    t.bigint "atch_party_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["atch_party_id"], name: "index_attendees_on_atch_party_id"
     t.index ["user_id"], name: "index_attendees_on_user_id"
-    t.index ["watch_party_id"], name: "index_attendees_on_watch_party_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -66,12 +65,15 @@ ActiveRecord::Schema.define(version: 2021_11_24_152926) do
     t.text "review"
     t.text "overview"
     t.text "synopsis"
-    t.integer "rating"
+    t.float "rating"
     t.string "movie_url"
     t.bigint "movie_date_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "picture"
+    t.string "director"
+    t.integer "year"
+    t.string "actor"
     t.index ["movie_date_id"], name: "index_movies_on_movie_date_id"
   end
 
