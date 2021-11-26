@@ -58,7 +58,9 @@
     <%= link_to "Create your review", new_movie_review_path(@movie), class: "btn btn-ghost"  %>
     <h1>Movie Review</h1>
     <p><% @movie.reviews.each do |review| %></p>
+    <%= review.user.username %>
     <%= review.comment %>
+    <%= review.rating %>
     <% end %>
 
 </div>
