@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_101712) do
   create_table "reviews", force: :cascade do |t|
     t.bigint "movie_id"
     t.bigint "user_id"
-    t.text "comment"
+    t.text "\"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["movie_id"], name: "index_reviews_on_movie_id"
