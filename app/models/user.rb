@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :watch_parties
   has_many :attendees
+  has_many :attending_watch_parties, through: :attendees, source: :watch_party
   has_many :reviews
 
 end

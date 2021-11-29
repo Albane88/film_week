@@ -8,9 +8,6 @@ class AttendeesController < ApplicationController
     redirect_to watch_party_path @watch_party
   end
 
-  private
-
-
   def index
     @attendees = Attendee.all
   end
@@ -18,4 +15,11 @@ class AttendeesController < ApplicationController
   def show
     @attendee = Attendee.find(params[:id])
   end
+
+  def destroy
+    @attendee = Attendee.find(params[:id])
+    @attendee.destroy
+    redirect_to watch_parties_path format: "chatbox"
+  end
+
 end
