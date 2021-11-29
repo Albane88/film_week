@@ -124,7 +124,7 @@ m7 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/gNp0jlfbgqM",
   movie_date_id: movie_date_7.id,
   review: "",
-  picture: ""
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg"
 )
 
 u = User.create!(email: 'jd@oui.com', password: '123123')

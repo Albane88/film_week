@@ -43,3 +43,5 @@ document.addEventListener('turbolinks:load', () => {
 document.addEventListener('turbolinks:load', () => {
   initWatchPartyCable()
 });
+
+import "controllers"
