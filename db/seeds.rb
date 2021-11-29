@@ -29,7 +29,7 @@ m1 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/Op9iQiB_ANI",
   movie_date_id: movie_date_1.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Shame_fn2ylj.jpg"
+  picture: 'shame.jpg'
 )
 # m1.photo.attach(io: pic1, filename: 'shame.png', content_type: 'image/png')
 
@@ -46,7 +46,7 @@ m2 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/wZfs22E7JmI",
   movie_date_id: movie_date_2.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Inherent_Vice_w4jg8s.jpg"
+  picture: 'inherent_vice.jpg'
 )
 
 m3 = Movie.create!(
@@ -62,7 +62,7 @@ m3 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/V7mQYVQZiRA",
   movie_date_id: movie_date_3.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766040/Images%20FilmWeek%20App%20Le%20Wagon/Goodbye_First_Love_s3eptp.jpg"
+  picture: "goodbye_first_love.jpg"
 )
 
 m4 = Movie.create!(
@@ -77,7 +77,7 @@ m4 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/HGe_O7Ll3HY",
   movie_date_id: movie_date_4.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Happening_Audrey_Diwan_tqbxh2.jpg"
+  picture: "happening.jpg"
 )
 
 m5 = Movie.create!(
@@ -92,7 +92,7 @@ m5 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/Yu7b-jGANr8",
   movie_date_id: movie_date_5.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/National_Gallery_Frederick_Wiseman_lb6qvr.jpg"
+  picture: "national_gallery.png"
 )
 
 m6 = Movie.create!(
@@ -108,7 +108,7 @@ m6 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/2HkjrJ6IK5E",
   movie_date_id: movie_date_6.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Oldboy_zzzrhd.jpg"
+  picture: "oldboy.jpg"
 )
 
 m7 = Movie.create!(

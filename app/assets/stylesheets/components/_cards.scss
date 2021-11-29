@@ -1,0 +1,42 @@
+.movie-list {
+display: flex;
+flex-wrap: wrap;
+// width: 50%;
+justify-content: center;
+}
+
+.card {
+width: 250px;
+height: 370px;
+margin: 60px;
+border-radius: 10px;
+background-size: cover;
+background-color: black;
+justify-content: center;
+display: flex;
+align-items: center;
+}
+
+// .card div {
+// width: 100%;
+// height: 100%;
+
+// border-radius: 10px;
+// }
+
+//.card:hover {
+//opacity: 0.8;
+//background-color: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) !important;
+//}
+
+
+.brightness {
+  filter: brightness(0.3);
+}
+
+h2 {
+  color: white;
+  align-self: center;
+  text-align: center;
+  filter: none;
+}
