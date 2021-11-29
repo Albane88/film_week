@@ -1,25 +1,54 @@
-<div class="team-boxed">
-  <div class="container">
-    <div class="intro">
-      <h2 class="text-center"> Watch party of <%= @watch_party.user.username %></h2>
-       <div class="box">
 
-          <div class= "user-info">
-            <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
-              <p><%= @watch_party.name %></p>
-              <p><%= @watch_party.location %></p>
-              <p><%= @watch_party.user.email %></p>
-          </div>
-        </div>
-
+<body>
+  <div id="banner">
+    <h1><%= @watch_party.name %></h1>
+    <div class= "banner-box">
+      <div class= "avatar">
+        <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
+      </div>
+      <div class= "page-header">
+        <h2> Hosted by <%= @watch_party.user.username %> </h2>
+        <p><%= @watch_party.date %></p>
+        <p><%= @watch_party.location %></p>
+      </div>
     </div>
-    <div class="attendees">
-      <h3 class="text-center"> Attending: <% @watch_party.attendees.each do |attendee| %>
-        <%= attendee.user.username %>
-      <% end %>
-      </h3>
   </div>
 
+  <div class="main">
+    <div class= left-elements>
+      <div class= "content">
+        <h2><b>Description</b></h2>
+        <%= @watch_party.content %>
+      </div>
+      <div class="attendees">
+        <h3 class="attendee-cards"> <b>Attending:</b> <% @watch_party.attendees.each do |attendee| %>
+          <%= cl_image_tag attendee.user.avatar.key, id: 'user-avatar' %>
+          <%= attendee.user.username %>
+        <% end %>
+        </h3>
+      </div>
+      <div class= 'contact'>
+      <button type="button" class="btn-g" data-toggle="modal" data-target="#fullmovieModal">
+    <%=mail_to @watch_party.user.email, 'Contact the host' %>
+  </button>
+      </div>
+    </div>
+
+    <div class= 'right-elements'>
+      <div class="card">
+        <div class= "info">
+          <img class="marker" src="marker.png">
+          <p><%= @watch_party.date %></p>
+          <p><%= @watch_party.location %></p>
+        </div>
+        <div id="map"
+              style="width: 700px; height: 350px;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -40,3 +69,5 @@
   <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}" %>
   <%= f.button :submit, :label => 'Assign', class: "btn btn-default btn-primary" %>
 <% end %>
+
+</body>
