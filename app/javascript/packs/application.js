@@ -27,6 +27,8 @@ import "bootstrap";
 
 import { initMapbox } from '../plugins/init_mapbox';
 
+import { initWatchPartyCable} from '../channels/watch_party_channel';
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,4 +37,9 @@ import { initStarRating } from '../plugins/init_star_rating';
 document.addEventListener('turbolinks:load', () => {
   initMapbox()
   initStarRating();
+});
+
+
+document.addEventListener('turbolinks:load', () => {
+  initWatchPartyCable()
 });
