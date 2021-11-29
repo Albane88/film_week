@@ -3,14 +3,32 @@
     <div class="intro">
       <h2 class="text-center"> Watch party of <%= @watch_party.user.username %></h2>
        <div class="box">
-                <div class= "user-info">
-                  <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
-                    <p><%= @watch_party.name %></p>
-                    <p><%= @watch_party.location %></p>
-                    <p><%= @watch_party.user.email %></p>
-                </div>
-                </div>
-
+          <div class= "user-info">
+            <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
+              <p><%= @watch_party.name %></p>
+              <p><%= @watch_party.location %></p>
+              <p><%= @watch_party.user.email %></p>
+          </div>
+        </div>
     </div>
   </div>
 </div>
+
+
+<h3>#<%= @watch_party.name %></h3>
+<div id="messages" data-watch_party-id="<%= @watch_party.id %>">
+    <% @watch_party.messages.each do |message| %>
+      <div class="message-container" id="message-<%= message.id %>">
+        <i class="author">
+          <span><%= message.attendee.user.username %></span>
+          <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+        </i>
+        <p><%= message.content %></p>
+      </div>
+    <% end %>
+</div>
+
+<%= simple_form_for [ @watch_party, @message ], remote: true do |f| %>
+  <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}" %>
+  <%= f.button :submit, :label => 'Assign', class: "btn btn-default btn-primary" %>
+<% end %>

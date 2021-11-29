@@ -13,12 +13,9 @@ class WatchPartiesController < ApplicationController
     end
   end
 
-  def watch_party_params
-    params.require(:watch_party).permit(:title, :location, :date, :name, :movie_id)
-  end
-
   def show
     @watch_party = WatchParty.find(params[:id])
+    @message = Message.new
   end
 
   def index
@@ -31,4 +28,11 @@ class WatchPartiesController < ApplicationController
       }
     end
   end
+
+  private
+
+  def watch_party_params
+    params.require(:watch_party).permit(:title, :location, :date, :name, :movie_id)
+  end
+
 end
