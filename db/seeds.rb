@@ -28,7 +28,7 @@ m1 = Movie.create!(
   rating: 7.9,
   movie_url: "https://www.youtube.com/embed/Op9iQiB_ANI",
   movie_date_id: movie_date_1.id,
-  review: "A must watch movie, movie's story is interesting, actors are well-play professionally.",
+  review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Shame_fn2ylj.jpg"
 )
 # m1.photo.attach(io: pic1, filename: 'shame.png', content_type: 'image/png')
@@ -45,7 +45,7 @@ m2 = Movie.create!(
   rating: 8.9,
   movie_url: "https://www.youtube.com/embed/wZfs22E7JmI",
   movie_date_id: movie_date_2.id,
-  review: "High recommendation movie, movie's story is beautiful, actors are well-play professionally.",
+  review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Inherent_Vice_w4jg8s.jpg"
 )
 
@@ -61,7 +61,7 @@ m3 = Movie.create!(
   rating: 8.9,
   movie_url: "https://www.youtube.com/embed/V7mQYVQZiRA",
   movie_date_id: movie_date_3.id,
-  review: "A must watch movie, movie's story is interesting, actors are well-play professionally.",
+  review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766040/Images%20FilmWeek%20App%20Le%20Wagon/Goodbye_First_Love_s3eptp.jpg"
 )
 
@@ -76,7 +76,7 @@ m4 = Movie.create!(
   rating: 8.9,
   movie_url: "https://www.youtube.com/embed/HGe_O7Ll3HY",
   movie_date_id: movie_date_4.id,
-  review: "High recommendation movie, movie's story is beautiful, actors are well-play professionally.",
+  review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Happening_Audrey_Diwan_tqbxh2.jpg"
 )
 
@@ -91,7 +91,7 @@ m5 = Movie.create!(
   rating: 8.9,
   movie_url: "https://www.youtube.com/embed/Yu7b-jGANr8",
   movie_date_id: movie_date_5.id,
-  review: "A must watch movie, movie's story is interesting, actors are well-play professionally.",
+  review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/National_Gallery_Frederick_Wiseman_lb6qvr.jpg"
 )
 
@@ -107,7 +107,7 @@ m6 = Movie.create!(
   rating: 8.9,
   movie_url: "https://www.youtube.com/embed/2HkjrJ6IK5E",
   movie_date_id: movie_date_6.id,
-  review: "High recommendation movie, movie's story is beautiful, actors are well-play professionally.",
+  review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Oldboy_zzzrhd.jpg"
 )
 
@@ -123,7 +123,7 @@ m7 = Movie.create!(
   rating: 8.9,
   movie_url: "https://www.youtube.com/embed/gNp0jlfbgqM",
   movie_date_id: movie_date_7.id,
-  review: "A must watch movie, movie's story is interesting, actors are well-play professionally.",
+  review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg"
 )
 
