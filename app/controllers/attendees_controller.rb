@@ -2,9 +2,14 @@ class AttendeesController < ApplicationController
   def create
     @attendee = Attendee.new
     @attendee.user = current_user
-    @attendee.watch_party_id = params[:watch_party_id]
-    redirect_to watch_party_path(params[:watch_party_id]) if @attendee.save!
+    @watch_party = WatchParty.find params[:watch_party_id]
+    @attendee.watch_party = @watch_party
+    @attendee.save!
+    redirect_to watch_party_path @watch_party
   end
+
+  private
+
 
   def index
     @attendees = Attendee.all

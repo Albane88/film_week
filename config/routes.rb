@@ -12,10 +12,14 @@ Rails.application.routes.draw do
   # get 'movie/id/reviews', to: 'reviews#show', as: :review
   # get 'home', to: 'homepages#home'
 
-   resources :movies, only: [:show] do
+
+  resources :movies, only: [:show] do
     resources :reviews, only: [:new, :create]
-   end
-   resources :watch_parties, only: [:new, :create, :show, :index] do
-    resources :attendees, only: [:create, :show]
-   end
+  end
+
+  resources :watch_parties, only: [:new, :create, :show, :index] do
+    resources :messages, only: [:new, :create, :show, :index]
+    resources :attendees, only: [:create]
+  end
+
 end

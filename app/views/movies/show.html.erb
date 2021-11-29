@@ -1,9 +1,11 @@
-<div class="container">
+<div class="movie-header">
   <h1>
-    Discover <%= @movie.title %>
+    Discover
+    <span><%= @movie.title %></span>
   </h1>
 
   <!-- Trailer Modal -->
+  <div class="play=button">
   <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#trailerModal">
     Watch Trailer
   </button>
@@ -37,30 +39,33 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
-        <%= link_to "Write a review", "#", class: "btn btn-ghost" %>
       </div>
     </div>
   </div>
+  </div>
 
-  <div class="movie-info">
-    <h1>Director</h1>
-    <p><%= @movie.director %></p>
-    <h1>Movie Year</h1>
-    <p><%= @movie.year %></p>
-    <h1>Movie Actor</h1>
-    <p><%= @movie.actor %></p>
-    <h1>Overview</h1>
-    <p><%= @movie.overview %></p>
-    <h1>Synopsis</h1>
-    <p><%= @movie.synopsis %></p>
-    <h1>Rating</h1>
-    <p><%= @movie.rating %></p>
-    <%= link_to "Create your review", new_movie_review_path(@movie), class: "btn btn-ghost"  %>
-    <h1>Movie Review</h1>
-    <p><% @movie.reviews.each do |review| %></p>
-    <%= review.user.username %>
-    <%= review.comment %>
-    <%= review.rating %>
-    <% end %>
+</div>
 
+
+<div class="movie-info">
+  <h3>Director</h3>
+  <p><%= @movie.director %></p>
+
+  <h3>Movie Year</h3>
+  <p><%= @movie.year %></p>
+
+  <h3>Movie Actor</h3>
+  <p><%= @movie.actor %></p>
+
+  <h3>Overview</h3>
+  <p><%= @movie.overview %></p>
+
+  <h3>Synopsis</h3>
+  <p><%= @movie.synopsis %></p>
+
+  <h3>Rating</h3>
+  <p><%= @movie.rating %></p>
+
+  <h3>Movie Review</h3>
+  <p><%= @movie.review %></p>
 </div>
