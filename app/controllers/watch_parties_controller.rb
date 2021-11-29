@@ -16,6 +16,11 @@ class WatchPartiesController < ApplicationController
   def show
     @watch_party = WatchParty.find(params[:id])
     @message = Message.new
+    @markers =  [{
+        lat: @watch_party.latitude,
+        lng: @watch_party.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { watch_party: @watch_party })
+      }]
   end
 
   def index
@@ -42,7 +47,7 @@ class WatchPartiesController < ApplicationController
   private
 
   def watch_party_params
-    params.require(:watch_party).permit(:title, :location, :date, :name, :movie_id)
+    params.require(:watch_party).permit(:title, :content, :location, :date, :name, :movie_id)
   end
 
 end
