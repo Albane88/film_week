@@ -29,8 +29,8 @@
       </div>
       <div class= 'contact'>
       <button type="button" class="btn-g" data-toggle="modal" data-target="#fullmovieModal">
-    <%=mail_to @watch_party.user.email, 'Contact the host' %>
-  </button>
+          <%=mail_to @watch_party.user.email, 'Contact the host' %>
+        </button>
       </div>
     </div>
 
@@ -51,25 +51,24 @@
   </div>
 </div>
 
-
-<h3><%= @watch_party.name %></h3>
-<div id="messages" data-watch_party-id="<%= @watch_party.id %>">
-    <% @watch_party.messages.each do |message| %>
-      <div class="message-container" id="message-<%= message.id %>">
-        <i class="author">
-          <span><%= message.attendee.user.username %></span>
-          <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-        </i>
-        <p><%= message.content %></p>
-      </div>
-    <% end %>
-</div>
-
-<%= simple_form_for [ @watch_party, @message ], remote: true do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}" %>
-  <%= f.button :submit, :label => 'Assign', class: "btn btn-default btn-primary" %>
-  <%= link_to 'Return Watch Party List', watch_parties_path, :class => "btn btn-primary" %>
-  <%= link_to "Chatbox", watch_parties_path, class:"btn btn-primary" %>
-<% end %>
-
 </body>
+
+  <h3><%= @watch_party.name %></h3>
+  <div id="messages" data-watch_party-id="<%= @watch_party.id %>">
+      <% @watch_party.messages.each do |message| %>
+        <div class="message-container" id="message-<%= message.id %>">
+          <i class="author">
+            <span><%= message.attendee.user.username %></span>
+            <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+          </i>
+          <p><%= message.content %></p>
+        </div>
+      <% end %>
+  </div>
+
+  <%= simple_form_for [ @watch_party, @message ], remote: true do |f| %>
+    <%= f.input :content, label: false, placeholder: "Type your message here." %>
+    <%= f.button :submit, :label => 'Assign', value: "Send", class: "btn btn-primary" %>
+    <%= link_to 'Return Watch Party List', watch_parties_path, :class => "btn btn-primary" %>
+    <%= link_to "Chatbox", watch_parties_path, class:"btn btn-primary" %>
+  <% end %>
