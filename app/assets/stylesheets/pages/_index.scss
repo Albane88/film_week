@@ -1,2 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.ban {
+ background-color: white;
+ height: 250px;
+}
+
+.text-main {
+  padding-top: 50px;
+}
+
+.text-second {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.movie-box {
+  display: flex;
+  -ms-flex-align: start;
+}
