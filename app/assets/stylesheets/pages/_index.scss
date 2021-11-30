@@ -2,10 +2,17 @@
 @import "home";
 
 .ban {
-  height: 225px;
-  background-color: white;
-  justify-content: center;
-  padding: 50px;
+ background-color: white;
+ height: 250px;
+}
+
+.text-main {
+  padding-top: 50px;
+}
+
+.text-second {
+  padding-top: 20px;
+  text-align: center;
 }
 
 .movie-box {
