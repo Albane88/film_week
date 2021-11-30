@@ -112,17 +112,18 @@ m6 = Movie.create!(
 )
 
 m7 = Movie.create!(
-  director: "Gaspar Noé",
-  year: 2018,
-  actor: "Sofia Boutella, Romain Guillermic, Souheila Yacoub",
-  title: "Climax",
-  overview: "French dancers gather in a remote, empty school building to rehearse on a wintry night. The all-night celebration morphs into a hallucinatory nightmare when they learn their sangria is laced with LSD.",
-  synopsis: "A group of French dancers gathers in an empty school to rehearse and party.
-  However, their celebration soon turns into a nightmare when they realise that their drinks
-  are spiked with LSD.",
+  director: "Frank Darabont",
+  year: 1994,
+  actor: "Morgan Freeman, Tim Robbins",
+  title: "Shawshank Redemption",
+  overview: "Andy Dufresne, a successful banker, is arrested for the murders of his wife and her lover, and is sentenced to life imprisonment at the Shawshank prison. He becomes the most unconventional prisoner.",
+  synopsis: "Andy Dufresne is sentenced to two consecutive life terms
+  in prison for the murders of his wife and her lover and is sentenced to a tough prison.
+  However, only Andy knows he didn't commit the crimes. While there, he forms a friendship
+  with Red, experiences brutality of prison life, adapts, helps the warden, etc., all in 19 years.",
   rating: 8.9,
-  movie_url: "https://www.youtube.com/embed/gNp0jlfbgqM",
+  movie_url: "https://www.youtube.com/watch?v=NmzuHjWmXOc&ab_channel=MovieclipsClassicTrailers",
   movie_date_id: movie_date_7.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg"
+  picture: "111.jpg"
 )
