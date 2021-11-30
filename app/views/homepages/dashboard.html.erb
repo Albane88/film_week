@@ -1,24 +1,31 @@
 
 <div data-controller="dashboard">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @movies.last.picture %>);">
-    <div class="container">
-      <h1>Film of the day</h1>
-      <p><%= @movies.last.title %> (Director, Year)</p>
-      <%= link_to "More information", "#", class: "btn btn-ghost" %>
+  <div class="banner" style="background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,1) 130%), url(<%= image_path(@movies.last.picture) %>);">
+    <div class="filmoftheday">
+      <h1 class="day">Film of the day</h1>
+      <div>
+      <p class="movietitle"><%=@movies.last.title %></p>
+      <p class="overview"><%= @movies.last.overview %></p>
+      <div class=spaceyear>
+      <p class="director">Director: <%= @movies.last.director %></p>
+      <p class="year">Year: <%= @movies.last.year %></p>
+      <p class="rating">Rating: <%= @movies.last.rating %></p>
+      </div>
+      <%= link_to "Watch the movie", "#movie_path(movie)", class: "btn btn-primary" %>
+      <%= link_to "Discover Watch Parties", watch_parties_path, class: "btn btn-primary" %>
+      </div>
     </div>
   </div>
 
-  <div>
-    <h2 ><%= link_to "Discover Watch Parties", watch_parties_path, class:"btn btn-primary" %></h2>
-  </div>
-
   <div class="movie-list">
-    <% @movies.sort_by { |x| x.movie_date.start_date}.reverse.each do |movie| %>
-    <% unless movie == @movies.last %>
-      <div class="card" style="background-image: url('<%= image_path(movie.picture) %>');" data-image-url="<%= image_path(movie.picture) %>" data-dashboard-target="poster" data-action="mouseover->dashboard#showInfo mouseout->dashboard#hideInfo">
-         <h2 class="d-none"><%= movie.title %></h2>
-      </div>
+      <% @movies.sort_by { |x| x.movie_date.start_date}.reverse.each do |movie| %>
+      <% unless movie == @movies.last %>
+      <%= link_to movie_path(movie), class: "title" do %>
+        <div class="card" style="background-image: url('<%= image_path(movie.picture) %>');" data-image-url="<%= image_path(movie.picture) %>" data-dashboard-target="poster" data-action="mouseover->dashboard#showInfo mouseout->dashboard#hideInfo">
+          <h2 class="d-none"><%= movie.title %></h2>
+        </div>
+         <% end %>
+        <% end %>
       <% end %>
-    <% end %>
   </div>
 </div>
