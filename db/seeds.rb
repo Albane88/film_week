@@ -126,9 +126,3 @@ m7 = Movie.create!(
   review: "",
   picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg"
 )
-
-u = User.create!(email: 'jd@oui.com', password: '123123')
-
-WatchParty.create!(date: "06/12/2021", location: "Charleroi", user_id: u.id, movie_id: m1.id)
-WatchParty.create!(date: "08/12/2021", location: "Charleroi", user_id: u.id, movie_id: m2.id)
-WatchParty.create!(date: "09/12/2021", location: "Charleroi", user_id: u.id, movie_id: m1.id)
