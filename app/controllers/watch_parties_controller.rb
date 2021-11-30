@@ -24,7 +24,11 @@ class WatchPartiesController < ApplicationController
   end
 
   def index
-    @watch_parties = WatchParty.all
+    if params[:format].present?
+      @watch_parties = current_user.attending_watch_parties
+    else
+      @watch_parties = WatchParty.all
+    end
     @markers = @watch_parties.geocoded.map do |watch_party|
       {
         lat: watch_party.latitude,
@@ -32,6 +36,12 @@ class WatchPartiesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { watch_party: watch_party })
       }
     end
+  end
+
+  def destroy
+    @watch_party = WatchParty.find(params[:id])
+    @watch_party.destroy
+    redirect_to watch_parties_path
   end
 
   private

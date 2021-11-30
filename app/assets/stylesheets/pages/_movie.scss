@@ -30,41 +30,31 @@
 }
 
 .movie-header {
-  background-image: asset-url('movie.gif');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: asset-url('movie2.jpg');
   background-size: cover;
   background-position: center;
-  height: 700px;
-}
-
-.play_button {
-  align-items: center;
+  height: 800px;
 }
 
 .movie-info {
-  background: rgba(yellow, 0.66);
-  color: white;
+  background-color: black;
+  border-radius: 8px;
   position: relative;
   padding: 1rem;
+  margin: 50px 50px;
   text-align: center;
-
-  h3 {
-    font-family: 'Syncopate',
-    sans-serif;
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 3vw;
-    line-height: 1.2;
-    font-size: 3vw;
-    text-align: center;
-  }
 
   p {
     font-family: 'Syncopate',
     sans-serif;
-    font-size: 1.5vw;
-    max-width: 600px;
+    font-size: 15px;
+    max-width: 800px;
     margin: 1rem auto;
-    text-align: center;
-    color: orangered;
+    text-align: left;
+    color: white;
+    padding: 5px;
   }
 }

@@ -52,7 +52,7 @@
 </div>
 
 
-<h3>#<%= @watch_party.name %></h3>
+<h3><%= @watch_party.name %></h3>
 <div id="messages" data-watch_party-id="<%= @watch_party.id %>">
     <% @watch_party.messages.each do |message| %>
       <div class="message-container" id="message-<%= message.id %>">
@@ -68,6 +68,8 @@
 <%= simple_form_for [ @watch_party, @message ], remote: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}" %>
   <%= f.button :submit, :label => 'Assign', class: "btn btn-default btn-primary" %>
+  <%= link_to 'Return Watch Party List', watch_parties_path, :class => "btn btn-primary" %>
+  <%= link_to "Chatbox", watch_parties_path, class:"btn btn-primary" %>
 <% end %>
 
 </body>

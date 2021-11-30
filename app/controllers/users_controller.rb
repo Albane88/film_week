@@ -10,4 +10,9 @@ class UsersController < ApplicationController
       @users = User.all
     end
   end
+
+  def destroy
+    @user.destroy
+    redirect_to watch_party_path(@watch_party.user)
+  end
 end
