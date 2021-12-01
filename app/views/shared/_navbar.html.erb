@@ -7,18 +7,8 @@
 
   <div>
     <ul class="navigation">
-
       <li><%= link_to "Home", dashboard_path %></li>
       <li><%= link_to "Watchparties", watch_parties_path %></li>
-      <li><%= link_to "Chatbox", watch_parties_path %></li>
-      <li class="dropdown"> Our Movie
-        <div class="dropdown-content">
-        <% Movie.all.each do |movie| %>
-          <%= link_to movie.title, movie_path(movie) %>
-        <% end %>
-        </div>
-      </li>
-
     </ul>
   </div>
   <div>
