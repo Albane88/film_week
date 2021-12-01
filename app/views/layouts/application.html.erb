@@ -16,7 +16,7 @@
 
   <body>
     <div class="main-content">
-      <%= render 'shared/navbar' unless params[:action] == "home" || devise_controller?%>
+      <%= render 'shared/navbar' unless params[:action] == "home" || devise_controller? %>
       <%= render 'shared/flashes' %>
 
       <%= yield %>

@@ -3,6 +3,14 @@
     <span><%= @movie.title %></span>
   </h1>
 
+  <div class="movie-info">
+    <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Director </span> <span class="w-50 text-left" ><%= @movie.director %> </span> </p>
+    <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Starrring </span> <span class="w-50 text-left"> <%= @movie.actor %> </span>  </p>
+    <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Synopsis </span> <span class="w-50 text-left"> <%= @movie.synopsis %> </span>  </p>
+    <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Movie Year </span> <span class="w-50 text-left"> <%= @movie.year %> </span>  </p>
+    <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Rating </span> <span class="w-50 text-left"> <%= @movie.rating %> </span>  </p>
+</div>
+
     <!-- Trailer Modal -->
   <div class="play-button">
     <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#trailerModal">
@@ -42,13 +50,5 @@
       </div>
     </div>
   </div>
-
-<div class="movie-info">
-  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Director </span> <span class="w-50 text-left" ><%= @movie.director %> </span> </p>
-  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Starrring </span> <span class="w-50 text-left"> <%= @movie.actor %> </span>  </p>
-  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Synopsis </span> <span class="w-50 text-left"> <%= @movie.synopsis %> </span>  </p>
-  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Movie Year </span> <span class="w-50 text-left"> <%= @movie.year %> </span>  </p>
-  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Rating </span> <span class="w-50 text-left"> <%= @movie.rating %> </span>  </p>
-</div>
 
 </div>
