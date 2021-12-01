@@ -19,13 +19,9 @@
     </ul>
   </div>
   <div>
-<<<<<<< HEAD
   <% if current_user.avatar %>
      <%= cl_image_tag current_user.avatar.key, id: "navbarDropdown", "data-toggle" =>  "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false"%>
      <% end %>
-=======
-     <%= cl_image_tag current_user.avatar.key, id: "navbarDropdown", "data-toggle" =>  "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false" if current_user.avatar.attached? %>
->>>>>>> 18ceded4f7e00b817d8db7034e5a886c154410a5
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <ul>
         <% if user_signed_in? %>
