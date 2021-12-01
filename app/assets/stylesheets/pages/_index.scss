@@ -4,6 +4,7 @@
 .ban {
  background-color: white;
  height: 250px;
+ object-position: center;
 }
 
 .text-main {
@@ -13,6 +14,21 @@
 .text-second {
   padding-top: 20px;
   text-align: center;
+}
+
+.start {
+  display: flex;
+  -ms-flex-align: center;
+  object-position: center;
+  font-weight: bold;
+}
+
+.left-wing {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .movie-box {

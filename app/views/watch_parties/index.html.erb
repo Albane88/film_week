@@ -2,6 +2,11 @@
   <div class= ban>
     <h1 class="text-main">Find a watch party in your neighbourhood</h1>
     <h3 class="text-second">& Meet new cinema enthusiasts!</h3>
+    <div class= start>
+      <div class="vertical-center">
+        <%= link_to "Or create your own watch party!", new_watch_party_path, class:"btn btn-primary" %>
+      </div>
+    </div>
   </div>
 
   <div class= left-wing>
@@ -20,41 +25,18 @@
               <%= link_to "Unregister", attendee_path(attendee),
               method: :delete, class:"btn btn-primary" %>
             <% end %>
-
       <% end %>
-    </div>
+  </div>
 
-            <div id="map"
-              style="width: 100%; height: 600px;"
-              data-markers="<%= @markers.to_json %>"
-              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div>
 
-            <%= link_to "Start your watch party", new_watch_party_path, class:"btn btn-primary" %>
+
+
+
+  <div class= right-wing>
+      <div id="map"
+            style="width: 100%; height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-
-    <div class="col-12 item">
-      <% @watch_parties.each_with_index do |watch_party| %>
-        <div class="box">
-          <div class= "profil">
-            <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
-              <h2><%= link_to watch_party.movie.title, movie_path(watch_party.movie_id) %></h2>
-              <p><%= watch_party.date %></p>
-              <p><%= watch_party.location %></p>
-
-              <%= link_to "Join", watch_party_attendees_path(watch_party),
-                  method: :post, class:"btn btn-primary" %>
-
-              <%= link_to 'Delete', watch_party_path(watch_party),
-                  method: :delete, data: {:confirm => 'Are you sure?'}, class:"btn btn-primary" %>
-
-              <% if attendee = current_user.attendees.find_by(watch_party: watch_party)  %>
-                <%= link_to "Unregister", attendee_path(attendee),
-                method: :delete, class:"btn btn-primary" %>
-              <% end %>
-
-          </div>
-        </div>
-      <% end %>
-    </div>
+  </div>
 </body>
