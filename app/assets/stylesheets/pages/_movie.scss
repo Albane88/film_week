@@ -1,60 +1,54 @@
-.btn-ghost {
+.btn-primary {
+  margin-left: 30px;
   color: white;
-  border: 1px solid whitesmoke;
+  background-color: red;
+  border: 1px solid red;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  font-family: "Nunito",
+  "Helvetica",
+  "sans-serif";
 }
 
-.btn-ghost:hover {
-  opacity: 1;
+.btn-primaryt:hover {
+  color: white;
+  background-color: red;
 }
 
 .movie-header h1 {
-  margin-top: 200px;
-  font-family: 'Syncopate',
-  sans-serif;
-  color: white;
+  margin: 70px 30px;
+  font-family: "Nunito",
+  "Helvetica",
+  "sans-serif";
+  color: whitesmoke;
   text-transform: uppercase;
-  letter-spacing: 3vw;
-  line-height: 1.2;
-  font-size: 3vw;
-  text-align: center;
-  span {
-    display: block;
-    font-size: 10vw;
-    letter-spacing: -1.3vw;
-  }
+  text-align: left;
+  font-size: 32px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
 }
 
 .movie-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: asset-url('movie2.jpg');
+  height: 90vh;
   background-size: cover;
   background-position: center;
-  height: 800px;
+  background-repeat: no-repeat;
+}
+
+.movie-header .movie-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 .movie-info {
-  background-color: black;
-  border-radius: 8px;
-  position: relative;
-  padding: 1rem;
-  margin: 50px 50px;
-  text-align: center;
-
-  p {
-    font-family: 'Syncopate',
-    sans-serif;
-    font-size: 15px;
-    max-width: 800px;
-    margin: 1rem auto;
-    text-align: left;
-    color: white;
-    padding: 5px;
-  }
+  font-family: "Nunito",
+  "Helvetica",
+  "sans-serif";
+  line-height: 1;
+  font-size: 16px;
+  max-width: 550px;
+  margin: 30px 0px;
+  color: whitesmoke;
+  letter-spacing: 0.1vw;
 }

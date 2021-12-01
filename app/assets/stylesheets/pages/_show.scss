@@ -1,26 +1,42 @@
 h1 {
   text-align: center;
-  margin-top: 50px;
+}
+
+.content h2 {
+  color: black;
+  margin-top: 20px;
 }
 
 .page-header {
   display: flex;
   flex-direction:column;
-  margin-left: 200px;
-  margin-top: 50px;
+  padding-left: 30px;
 }
 
+h2 {
+  justify-content: left;
+}
 
 .banner-box {
   display: flex;
   flex-direction: row;
-  margin-left: 300px;
-  margin-top: 50px;
+  width: 400px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.banner-all {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  object-position: center;
 }
 
 #banner {
   background-color: white;
-  padding: 20px;
+  height: 400px;
+  padding-top: 30px;
 }
 
 .main {
@@ -35,24 +51,26 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 50px;
-}
-
-.card {
   border-radius: 20px;
   background-color: white;
-  position: sticky;
 }
 
 .content {
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
   font-size: 20px;
+  color: black;
 }
 
 .attendees {
+  margin-top: 50px;
   margin-bottom: 100px;
-  text-justify: left;
-  display: flex;
-  flex-direction: column;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20px;
+  color: black;
 }
 
 .btn-g {
@@ -63,10 +81,20 @@ h1 {
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  margin-top: 20px;
+  font-size: 20px;
 }
+
+
 
 .btn-g:hover {
   opacity: 1;
+  text-decoration: none;
+}
+
+.btn-g a:hover {
+  text-decoration: none;
+
 }
 
 #user-avatar {
@@ -74,4 +102,41 @@ h1 {
     vertical-align: middle;
     height: 72px;
     width: 72px;
+}
+
+.right-elements {
+  border-radius: 20px;
+  background-color: white;
+  height: 600px;
+  position: sticky;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.user-cards {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-style {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#user-avatar {
+  margin: 20px;
+}
+
+.chat-box {
+  margin-top: 50px;
 }

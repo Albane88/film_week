@@ -1,21 +1,80 @@
+.spaceyear {
+  margin-bottom: 1rem;
+  p {
+
+    margin: 0.1rem;
+  }
+}
+
+.movietitle {
+  font-size: 35px !important;
+  color: white !important;
+}
+
+.director {
+  font-weight: lighter !important;
+  font-size: 15px !important;
+  opacity: .7;
+}
+
+.rating{
+  font-weight: lighter !important;
+  font-size: 15px !important;
+  opacity: .7;
+}
+
+.year {
+  font-weight: lighter !important;
+  font-size: 15px !important;
+  margin-top: 0rem;
+  opacity: .7;
+}
+
+.filmoftheday {
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-evenly;
+  .movieinfo {
+    margin-top: 115px;
+  }
+}
+
+.day {
+  text-align: left;
+  margin-bottom: 4rem;
+  font-size: 50px;
+  margin-top: 50px !important ;
+}
+
+.overview {
+  max-width: 500px;
+  color: rgb(255, 255, 255) !important;
+  opacity: .7;
+}
+
 .movie-list {
-display: flex;
-flex-wrap: wrap;
-// width: 50%;
-justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  // width: 50%;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .card {
-width: 250px;
-height: 370px;
-margin: 60px;
-border-radius: 10px;
-background-size: cover;
-background-color: black;
-justify-content: center;
-display: flex;
-align-items: center;
+  width: 250px;
+  height: 370px;
+  margin: 60px;
+  border-radius: 10px;
+  background-size: cover;
+  background-color: black;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
+
 
 // .card div {
 // width: 100%;
@@ -34,9 +93,34 @@ align-items: center;
   filter: brightness(0.3);
 }
 
-h2 {
+
+.title {
+  text-decoration: none !important;
   color: white;
-  align-self: center;
-  text-align: center;
-  filter: none;
+}
+.d-none {
+  text-decoration: none !important;
+}
+
+
+.btn-primary {
+  color: #fbf9f9;
+  background-color: #d50d0d;
+  border: 2px solid #d50d0d !important;
+  border-radius: 20px;
+}
+
+.btn-primary:hover {
+  color: #fbf9f9;
+  background-color: #8e0303
+}
+
+.btn {
+  padding: 9px 20px;
+  border-radius: 25px;
+}
+
+.hi-there {
+  text-align: left;
+  color: white !important
 }

@@ -29,7 +29,8 @@ m1 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/Op9iQiB_ANI",
   movie_date_id: movie_date_1.id,
   review: "",
-  picture: 'shame.jpg'
+  picture: 'shame.jpg',
+  picture_2: 'Shame001.jpg'
 )
 # m1.photo.attach(io: pic1, filename: 'shame.png', content_type: 'image/png')
 
@@ -46,7 +47,8 @@ m2 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/wZfs22E7JmI",
   movie_date_id: movie_date_2.id,
   review: "",
-  picture: 'inherent_vice.jpg'
+  picture: 'inherent_vice.jpg',
+  picture_2: 'inherentvice001.jpg'
 )
 
 m3 = Movie.create!(
@@ -62,7 +64,8 @@ m3 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/V7mQYVQZiRA",
   movie_date_id: movie_date_3.id,
   review: "",
-  picture: "goodbye_first_love.jpg"
+  picture: "goodbye_first_love.jpg",
+  picture_2: 'goodbyefirstlove001.jpg'
 )
 
 m4 = Movie.create!(
@@ -77,7 +80,8 @@ m4 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/HGe_O7Ll3HY",
   movie_date_id: movie_date_4.id,
   review: "",
-  picture: "happening.jpg"
+  picture: "happening.jpg",
+  picture_2: 'happening001.jpg'
 )
 
 m5 = Movie.create!(
@@ -92,7 +96,8 @@ m5 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/Yu7b-jGANr8",
   movie_date_id: movie_date_5.id,
   review: "",
-  picture: "national_gallery.png"
+  picture: "national_gallery.png",
+  picture_2: 'Nationalgallery001.jpg'
 )
 
 m6 = Movie.create!(
@@ -108,27 +113,24 @@ m6 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/2HkjrJ6IK5E",
   movie_date_id: movie_date_6.id,
   review: "",
-  picture: "oldboy.jpg"
+  picture: "oldboy.jpg",
+  picture_2: 'Oldboy001.jpg'
 )
 
 m7 = Movie.create!(
-  director: "Gaspar Noé",
-  year: 2018,
-  actor: "Sofia Boutella, Romain Guillermic, Souheila Yacoub",
-  title: "Climax",
-  overview: "French dancers gather in a remote, empty school building to rehearse on a wintry night. The all-night celebration morphs into a hallucinatory nightmare when they learn their sangria is laced with LSD.",
-  synopsis: "A group of French dancers gathers in an empty school to rehearse and party.
-  However, their celebration soon turns into a nightmare when they realise that their drinks
-  are spiked with LSD.",
+  director: "Frank Darabont",
+  year: 1994,
+  actor: "Morgan Freeman, Tim Robbins",
+  title: "Shawshank Redemption",
+  overview: "Andy Dufresne, a successful banker, is arrested for the murders of his wife and her lover, and is sentenced to life imprisonment at the Shawshank prison. He becomes the most unconventional prisoner.",
+  synopsis: "Andy Dufresne is sentenced to two consecutive life terms
+  in prison for the murders of his wife and her lover and is sentenced to a tough prison.
+  However, only Andy knows he didn't commit the crimes. While there, he forms a friendship
+  with Red, experiences brutality of prison life, adapts, helps the warden, etc., all in 19 years.",
   rating: 8.9,
-  movie_url: "https://www.youtube.com/embed/gNp0jlfbgqM",
+  movie_url: "https://www.youtube.com/embed/P9mwtI82k6E",
   movie_date_id: movie_date_7.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg"
+  picture: "111.jpg",
+  picture_2: "111.jpg"
 )
-
-u = User.create!(email: 'jd@oui.com', password: '123123')
-
-WatchParty.create!(date: "06/12/2021", location: "Charleroi", user_id: u.id, movie_id: m1.id)
-WatchParty.create!(date: "08/12/2021", location: "Charleroi", user_id: u.id, movie_id: m2.id)
-WatchParty.create!(date: "09/12/2021", location: "Charleroi", user_id: u.id, movie_id: m1.id)

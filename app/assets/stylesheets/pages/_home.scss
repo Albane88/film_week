@@ -24,7 +24,6 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
 }
 
@@ -58,6 +57,7 @@
   justify-content: space-between;
   margin: 0px;
   text-decoration: none;
+
   a {
     color: white;
   }
@@ -71,7 +71,6 @@
 }
 
 .avatar {
-  width: 56px;
   border-radius: 50%;
 }
 
