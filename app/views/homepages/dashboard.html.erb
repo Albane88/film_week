@@ -13,7 +13,7 @@
       <p class="year">Year: <%= @movies.last.year %></p>
       <p class="rating">Rating: <%= @movies.last.rating %></p>
       </div>
-      <%= link_to "Watch the movie", "#movie_path(movie)", class: "btn btn-primary" %>
+      <%= link_to "Watch the movie", movie_path(@movies.last), class: "btn btn-primary" %>
       <%= link_to "Discover Watch Parties", watch_parties_path, class: "btn btn-primary" %>
       </div>
     </div>

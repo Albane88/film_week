@@ -1,6 +1,6 @@
 <div class="movie-header" style="background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%), url('<%= image_path(@movie.picture_2) %>')">
   <h1>
-    <span><%= @movie.title %></span>
+    <%= @movie.title %>
   </h1>
 
   <div class="movie-info">
@@ -13,7 +13,7 @@
 
     <!-- Trailer Modal -->
   <div class="play-button">
-    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#trailerModal">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trailerModal">
       Watch Trailer
     </button>
     <div class="modal fade" id="trailerModal" tabindex="-1" role="dialog" aria-labelledby="trailerModalLabel" aria-hidden="true">
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Full Movie Modal -->
-    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#fullmovieModal">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fullmovieModal">
       Watch Full Movie
     </button>
     <div class="modal fade" id="fullmovieModal" tabindex="-1" role="dialog" aria-labelledby="fullmovieModalLabel" aria-hidden="true">

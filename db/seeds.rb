@@ -128,7 +128,7 @@ m7 = Movie.create!(
   However, only Andy knows he didn't commit the crimes. While there, he forms a friendship
   with Red, experiences brutality of prison life, adapts, helps the warden, etc., all in 19 years.",
   rating: 8.9,
-  movie_url: "https://www.youtube.com/watch?v=NmzuHjWmXOc&ab_channel=MovieclipsClassicTrailers",
+  movie_url: "https://www.youtube.com/embed/P9mwtI82k6E",
   movie_date_id: movie_date_7.id,
   review: "",
   picture: "111.jpg",
