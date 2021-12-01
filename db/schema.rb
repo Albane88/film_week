@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_11_25_101712) do
+=======
+ActiveRecord::Schema.define(version: 2021_11_30_164056) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +78,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_101712) do
     t.string "director"
     t.integer "year"
     t.string "actor"
+    t.string "picture_2"
     t.index ["movie_date_id"], name: "index_movies_on_movie_date_id"
   end
 
@@ -83,6 +88,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_101712) do
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
     t.index ["movie_id"], name: "index_reviews_on_movie_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -96,6 +102,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_101712) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -110,6 +117,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_101712) do
     t.float "latitude"
     t.float "longitude"
     t.string "name"
+    t.text "content"
     t.index ["movie_id"], name: "index_watch_parties_on_movie_id"
     t.index ["user_id"], name: "index_watch_parties_on_user_id"
   end

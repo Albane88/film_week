@@ -1,61 +1,54 @@
-<div class="container">
+<div class="movie-header" style="background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%), url('<%= image_path(@movie.picture_2) %>')">
   <h1>
-    Discover <%= @movie.title %>
+    <span><%= @movie.title %></span>
   </h1>
 
-  <!-- Trailer Modal -->
-  <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#trailerModal">
-    Watch Trailer
-  </button>
-  <div class="modal fade" id="trailerModal" tabindex="-1" role="dialog" aria-labelledby="trailerModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <iframe
-            width="800"
-            height="500"
-            src="<%= @movie.movie_url %>"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+    <!-- Trailer Modal -->
+  <div class="play-button">
+    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#trailerModal">
+      Watch Trailer
+    </button>
+    <div class="modal fade" id="trailerModal" tabindex="-1" role="dialog" aria-labelledby="trailerModalLabel" aria-hidden="true">
+      <div class="modal-dialog .modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <iframe
+              width="800"
+              height="500"
+              src="<%= @movie.movie_url %>"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Movie Modal -->
+    <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#fullmovieModal">
+      Watch Full Movie
+    </button>
+    <div class="modal fade" id="fullmovieModal" tabindex="-1" role="dialog" aria-labelledby="fullmovieModalLabel" aria-hidden="true">
+      <div class="modal-dialog .modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <iframe
+              width="800"
+              height="500"
+              src="<%= @movie.movie_url %>"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Full Movie Modal -->
-  <button type="button" class="btn btn-ghost" data-toggle="modal" data-target="#fullmovieModal">
-    Watch Full Movie
-  </button>
-  <div class="modal fade" id="fullmovieModal" tabindex="-1" role="dialog" aria-labelledby="fullmovieModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <iframe
-            width="800"
-            height="500"
-            src="<%= @movie.movie_url %>"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-        <%= link_to "Write a review", "#", class: "btn btn-ghost" %>
-      </div>
-    </div>
-  </div>
-
-  <div class="movie-info">
-    <h1>Director</h1>
-    <p><%= @movie.director %></p>
-    <h1>Movie Year</h1>
-    <p><%= @movie.year %></p>
-    <h1>Movie Actor</h1>
-    <p><%= @movie.actor %></p>
-    <h1>Overview</h1>
-    <p><%= @movie.overview %></p>
-    <h1>Synopsis</h1>
-    <p><%= @movie.synopsis %></p>
-    <h1>Rating</h1>
-    <p><%= @movie.rating %></p>
-    <h1>Movie Review</h1>
-    <p><%= @movie.review %></p>
+<div class="movie-info">
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Director </span> <span class="w-50 text-left" ><%= @movie.director %> </span> </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Starrring </span> <span class="w-50 text-left"> <%= @movie.actor %> </span>  </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Synopsis </span> <span class="w-50 text-left"> <%= @movie.synopsis %> </span>  </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Movie Year </span> <span class="w-50 text-left"> <%= @movie.year %> </span>  </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Rating </span> <span class="w-50 text-left"> <%= @movie.rating %> </span>  </p>
+</div>
 
 </div>

@@ -1,0 +1,123 @@
+.spaceyear {
+  margin-bottom: 1rem;
+  p {
+
+    margin: 0.1rem;
+  }
+}
+
+.movietitle {
+  font-size: 35px !important;
+  color: white;
+}
+
+.director {
+  font-weight: lighter !important;
+  font-size: 15px !important;
+  opacity: .7;
+}
+
+.rating{
+font-weight: lighter !important;
+font-size: 15px !important;
+opacity: .7;
+}
+
+.year {
+  font-weight: lighter !important;
+  font-size: 15px !important;
+  margin-top: 0rem;
+    opacity: .7;
+}
+
+.filmoftheday {
+    height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 32px;
+    margin-top: -70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.day {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.overview {
+  max-width: 500px;
+  color: rgb(255, 255, 255) !important;
+  opacity: .7;
+}
+
+.movie-list {
+display: flex;
+flex-wrap: wrap;
+// width: 50%;
+justify-content: center;
+text-decoration: none;
+}
+
+.card {
+width: 250px;
+height: 370px;
+margin: 60px;
+border-radius: 10px;
+background-size: cover;
+background-color: black;
+justify-content: center;
+display: flex;
+align-items: center;
+}
+
+
+// .card div {
+// width: 100%;
+// height: 100%;
+
+// border-radius: 10px;
+// }
+
+//.card:hover {
+//opacity: 0.8;
+//background-color: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) !important;
+//}
+
+
+.brightness {
+  filter: brightness(0.3);
+}
+
+h2 {
+  color: white;
+  align-self: center;
+  text-align: center;
+  filter: none;
+}
+
+.title {
+  text-decoration: none !important;
+}
+.d-none {
+  text-decoration: none !important;
+}
+
+
+.btn-primary {
+    color: #fbf9f9;
+    background-color: #d50d0d;
+    border: 2px solid #d50d0d !important;
+    border-radius: 20px;
+}
+
+.btn-primary:hover {
+  color: #fbf9f9;
+  background-color: #8e0303
+}
+
+.btn {
+    padding: 9px 20px;
+    border-radius: 25px;
+}
