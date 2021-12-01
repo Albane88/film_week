@@ -1,6 +1,5 @@
-<div class="movie-header">
+<div class="movie-header" style="background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%), url('<%= image_path(@movie.picture_2) %>')">
   <h1>
-    Discover
     <span><%= @movie.title %></span>
   </h1>
 
@@ -44,14 +43,12 @@
     </div>
   </div>
 
+<div class="movie-info">
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Director </span> <span class="w-50 text-left" ><%= @movie.director %> </span> </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Starrring </span> <span class="w-50 text-left"> <%= @movie.actor %> </span>  </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Synopsis </span> <span class="w-50 text-left"> <%= @movie.synopsis %> </span>  </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Movie Year </span> <span class="w-50 text-left"> <%= @movie.year %> </span>  </p>
+  <p class="d-flex justify-content-around" style="min-width: 25vw"> <span class="w-25 text-left"> Rating </span> <span class="w-50 text-left"> <%= @movie.rating %> </span>  </p>
 </div>
 
-  <div class="movie-info">
-    <p>Director : <%= @movie.director %> </p>
-    <p>Movie Year : <%= @movie.year %> </p>
-    <p>Movie Actor : <%= @movie.actor %> </p>
-    <p>Overview : <%= @movie.overview %> </p>
-    <p>Synopsis : <%= @movie.synopsis %> </p>
-    <p>Rating : <%= @movie.rating %> </p>
-    <p>Movie Review : <%= @movie.review %> </p>
 </div>

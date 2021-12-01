@@ -29,7 +29,8 @@ m1 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/Op9iQiB_ANI",
   movie_date_id: movie_date_1.id,
   review: "",
-  picture: 'shame.jpg'
+  picture: 'shame.jpg',
+  picture_2: 'Shame001.jpg'
 )
 # m1.photo.attach(io: pic1, filename: 'shame.png', content_type: 'image/png')
 
@@ -46,7 +47,8 @@ m2 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/wZfs22E7JmI",
   movie_date_id: movie_date_2.id,
   review: "",
-  picture: 'inherent_vice.jpg'
+  picture: 'inherent_vice.jpg',
+  picture_2: 'inherentvice001.jpg'
 )
 
 m3 = Movie.create!(
@@ -62,7 +64,8 @@ m3 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/V7mQYVQZiRA",
   movie_date_id: movie_date_3.id,
   review: "",
-  picture: "goodbye_first_love.jpg"
+  picture: "goodbye_first_love.jpg",
+  picture_2: 'goodbyefirstlove001.jpg'
 )
 
 m4 = Movie.create!(
@@ -77,7 +80,8 @@ m4 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/HGe_O7Ll3HY",
   movie_date_id: movie_date_4.id,
   review: "",
-  picture: "happening.jpg"
+  picture: "happening.jpg",
+  picture_2: 'happening001.jpg'
 )
 
 m5 = Movie.create!(
@@ -92,7 +96,8 @@ m5 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/Yu7b-jGANr8",
   movie_date_id: movie_date_5.id,
   review: "",
-  picture: "national_gallery.png"
+  picture: "national_gallery.png",
+  picture_2: 'Nationalgallery001.jpg'
 )
 
 m6 = Movie.create!(
@@ -108,7 +113,8 @@ m6 = Movie.create!(
   movie_url: "https://www.youtube.com/embed/2HkjrJ6IK5E",
   movie_date_id: movie_date_6.id,
   review: "",
-  picture: "oldboy.jpg"
+  picture: "oldboy.jpg",
+  picture_2: 'Oldboy001.jpg'
 )
 
 m7 = Movie.create!(
@@ -125,5 +131,6 @@ m7 = Movie.create!(
   movie_url: "https://www.youtube.com/watch?v=NmzuHjWmXOc&ab_channel=MovieclipsClassicTrailers",
   movie_date_id: movie_date_7.id,
   review: "",
-  picture: "111.jpg"
+  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg",
+  picture_2: 'climax001.jpg'
 )
