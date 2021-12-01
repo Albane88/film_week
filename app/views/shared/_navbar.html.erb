@@ -7,16 +7,12 @@
 
   <div>
     <ul class="navigation">
-
       <li><%= link_to "Home", dashboard_path %></li>
       <li><%= link_to "Watchparties", watch_parties_path %></li>
-      <li><%= link_to "Chatbox", watch_parties_path %></li>
-      <li>Contact</li>
-
     </ul>
   </div>
   <div>
-     <%= cl_image_tag current_user.avatar.key, id: "navbarDropdown", "data-toggle" =>  "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false"%>
+     <%= cl_image_tag current_user.avatar.key, id: "navbarDropdown", "data-toggle" =>  "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false" if current_user.avatar.attached? %>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <ul>
         <% if user_signed_in? %>

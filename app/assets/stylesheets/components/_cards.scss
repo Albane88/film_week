@@ -34,8 +34,6 @@ opacity: .7;
     height: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-left: 32px;
-    margin-top: -70px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -44,6 +42,7 @@ opacity: .7;
 .day {
   text-align: left;
   margin-bottom: 4rem;
+  font-size: 50px;
 }
 
 .overview {
@@ -90,12 +89,6 @@ align-items: center;
   filter: brightness(0.3);
 }
 
-h2 {
-  color: white;
-  align-self: center;
-  text-align: center;
-  filter: none;
-}
 
 .title {
   text-decoration: none !important;
@@ -120,4 +113,9 @@ h2 {
 .btn {
     padding: 9px 20px;
     border-radius: 25px;
+}
+
+.hi-there {
+  text-align: left;
+  color: white;
 }
