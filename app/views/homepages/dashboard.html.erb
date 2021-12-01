@@ -2,7 +2,7 @@
 <div data-controller="dashboard">
   <div class="banner" style="background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,1) 130%), url(<%= image_path(@movies.last.picture) %>);">
     <div class="filmoftheday">
-      <h2> Welcome <%= current_user.username %> ! </h2>
+      <h2 class= hi-there> Welcome <%= current_user.username %>! </h2>
       <html lang="en">
       <head>
         <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 
       </body>
       </html> </h2>
-      <h1 class="day">Film of the day</h1>
+      <h1 class="day">Discover the movie of the day</h1>
       <div>
       <p class="movietitle"><%=@movies.last.title %></p>
       <p class="overview"><%= @movies.last.overview %></p>
