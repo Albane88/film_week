@@ -131,6 +131,6 @@ m7 = Movie.create!(
   movie_url: "https://www.youtube.com/watch?v=NmzuHjWmXOc&ab_channel=MovieclipsClassicTrailers",
   movie_date_id: movie_date_7.id,
   review: "",
-  picture: "https://res.cloudinary.com/imageslwgn/image/upload/v1637766039/Images%20FilmWeek%20App%20Le%20Wagon/Climax_Gaspard_Noe_eervns.jpg",
-  picture_2: 'climax001.jpg'
+  picture: "111.jpg",
+  picture_2: "111.jpg"
 )
