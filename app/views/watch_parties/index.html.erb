@@ -9,34 +9,42 @@
     </div>
   </div>
 
-  <div class= left-wing>
-    <div class= "movie-box">
-      <% @watch_parties.each_with_index do |watch_party| %>
-        <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
-          <h2><%= link_to watch_party.movie.title, movie_path(watch_party.movie_id) %></h2>
-          <p><%= watch_party.date %></p>
-          <p><%= watch_party.location %></p>
-          <%= link_to "Join", watch_party_attendees_path(watch_party),
-          method: :post, class:"btn btn-primary" %>
+  <div class= both-wings>
 
-          <%= link_to 'Delete', watch_party_path(watch_party),
-          method: :delete, data: {:confirm => 'Are you sure?'}, class:"btn btn-primary" %>
-            <% if attendee = current_user.attendees.find_by(watch_party: watch_party)  %>
-              <%= link_to "Unregister", attendee_path(attendee),
-              method: :delete, class:"btn btn-primary" %>
+      <div class= left-wing>
+        <div class= "movie-all">
+          <div class= 'movie-box'>
+            <% @watch_parties.each_with_index do |watch_party| %>
+              <div class= box-row>
+                <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
+                  <div class= 'info'>
+                    <h2><%= link_to watch_party.movie.title, movie_path(watch_party.movie_id) %></h2>
+                    <p><%= watch_party.date %></p>
+                    <p><%= watch_party.location %></p>
+                  </div>
+                  <div class= 'info-btn'>
+                    <%= link_to "Join", watch_party_attendees_path(watch_party),
+                    method: :post, class:"btn btn-primary" %>
+                    <%= link_to 'Delete', watch_party_path(watch_party),
+                    method: :delete, data: {:confirm => 'Are you sure?'}, class:"btn btn-primary" %>
+                      <% if attendee = current_user.attendees.find_by(watch_party: watch_party)  %>
+                        <%= link_to "Unregister", attendee_path(attendee),
+                        method: :delete, class:"btn btn-primary" %>
+                      <% end %>
+                  </div>
+              </div>
             <% end %>
-      <% end %>
-  </div>
-
-
-
-
-
-  <div class= right-wing>
-      <div id="map"
-            style="width: 100%; height: 600px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
         </div>
+      </div>
+
+      <div class= right-wing>
+          <div id="map"
+                style="width: 100%; height: 600px;"
+                data-markers="<%= @markers.to_json %>"
+                data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+      </div>
+
   </div>
 </body>
