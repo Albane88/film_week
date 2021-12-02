@@ -1,7 +1,6 @@
 
-<body>
   <div id="banner">
-    <h1><%= @watch_party.name %> Watch Party</h1>
+    <h1><b><%= @watch_party.name %></b></h1>
       <div class= banner-all>
         <div class= "banner-box">
           <div class= "avatar">
@@ -11,79 +10,84 @@
             <h3> Hosted by <%= @watch_party.user.username %> </h3>
             <p><%= @watch_party.date.strftime("%a %b %e at %l:%M%p")  %></p>
             <p><%= @watch_party.location %></p>
-          </div>
-        </div>
-      </div>
-  </div>
-
-  <div class="main">
-
-    <div class= left-elements>
-      <div class= "content">
-        <h3><b>Description</b></h3>
-        <%= @watch_party.content %>
-      </div>
-      <div class="attendees">
-        <h3><b> Attending</b></h3>
-        <div class= user-cards>
-        <% @watch_party.attendees.each do |attendee| %>
-          <div class= card-style>
-          <%= cl_image_tag attendee.user.avatar.key, id: 'user-avatar' %>
-          <%= attendee.user.username %>
-          </div>
-        <% end %>
-        </h3>
-      </div>
-      <div class= 'contact'>
-        </div>
-      </div>
-
-    </div>
-
-    <div class= 'right-elements'>
-      <div class= map-info>
-        <div id="map"
-          style="width: 700px; height: 350px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
-        <div class="container">
-          <i class="far fa-clock"></i>
-          <p><%= @watch_party.date.strftime("%a %b %e at %l:%M%p")%></p>
-          <i class="fas fa-map-marker"></i>
-          <p><%=@watch_party.location %></p>
-          <div class= 'contact'>
-            <button type="button" class="btn-g" data-toggle="modal" data-target="#fullmovieModal">
+            <button type="button" class="btn btn-primary my" data-toggle="modal" data-target="#fullmovieModal">
             <%=mail_to @watch_party.user.email, 'Contact the host' %>
             </button>
           </div>
         </div>
       </div>
-      <div class= chat-box>
-        <h3><%= @watch_party.name %></h3>
-        <div id="messages" data-watch_party-id="<%= @watch_party.id %>">
-            <% @watch_party.messages.each do |message| %>
-              <div class="message-container" id="message-<%= message.id %>">
-                <i class="author">
-                  <span><%= message.attendee.user.username %></span>
-                  <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-                </i>
-                <p><%= message.content %></p>
-              </div>
-            <% end %>
-        </div>
-
-        <%= simple_form_for [ @watch_party, @message ], remote: true do |f| %>
-          <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}" %>
-          <%= f.button :submit, :label => 'Assign', class: "btn btn-default btn-primary" %>
-        <% end %>
-        </div>
-
-
-
-
-      </div>
-    </div>
   </div>
 
-</body>
+<div class="main">
+
+    <div class= left-elements>
+        <div class= "content">
+          <h3><b>Description</b></h3>
+          <%= @watch_party.content %>
+        </div>
+              <div class= chat-box>
+          <h3><b>Chatroom</b></h3>
+          <div id="messages" data-watch_party-id="<%= @watch_party.id %>">
+              <% @watch_party.messages.each do |message| %>
+                <div class="message-container" id="message-<%= message.id %>">
+                  <i class="author">
+                    <span><%= message.attendee.user.username %></span>
+                    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+                  </i>
+                  <p><%= message.content %></p>
+                </div>
+              <% end %>
+          </div>
+
+          <%= simple_form_for [ @watch_party, @message ], remote: true do |f| %>
+            <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}" %>
+            <%= f.button :submit, :label => 'Assign', class: "btn btn-default btn-primary" %>
+          <% end %>
+
+      </div>
+        <div class="attendees">
+          <h3><b> Attending</b></h3>
+        <div class= user-cards>
+          <% @watch_party.attendees.each do |attendee| %>
+            <div class= card-style>
+            <%= cl_image_tag attendee.user.avatar.key, id: 'user-avatar' %>
+            <%= attendee.user.username %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class= 'right-elements'>
+        <div class= little-box-1>
+          <div class= "movie-img">
+           <%= image_tag(@watch_party.movie.picture) %>
+          </div>
+          <div class= "movie-inf">
+            <h3><b><%= @watch_party.movie.title %></b> </h3>
+          </div>
+        </div>
+
+
+
+
+        <div class= little-box-2>
+          <div class= map-info>
+            <div id="map"
+              style="height: 350px;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+            <div class="container">
+              <i class="far fa-clock"></i>
+              <p><%= @watch_party.date.strftime("%a %b %e at %l:%M%p")%></p>
+              <i class="fas fa-map-marker"></i>
+              <p><%=@watch_party.location %></p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

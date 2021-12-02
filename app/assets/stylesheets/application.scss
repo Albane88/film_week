@@ -20,3 +20,16 @@
 @import "./components/_cards.scss";
 @import "./pages/new";
 @import "./pages/info_window";
+
+a {
+    text-decoration: none !important;
+    color: white;
+    &:hover {
+      text-decoration: none !important;
+    }
+
+  }
+
+html {
+  scroll-behavior: smooth;
+}
