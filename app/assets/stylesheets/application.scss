@@ -18,4 +18,8 @@
 @import "jquery-bar-rating/dist/themes/css-stars";
 @import "./pages/show";
 @import "./components/_cards.scss";
+
+html {
+  scroll-behavior: smooth;
+}
 @import "./pages/new";

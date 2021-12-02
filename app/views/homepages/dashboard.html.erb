@@ -16,10 +16,12 @@
       <%= link_to "Watch the movie", movie_path(@movies.last), class: "btn btn-primary" %>
       <%= link_to "Discover Watch Parties", watch_parties_path, class: "btn btn-primary" %>
       </div>
+      <a href="#movie-list"> <i class="fas fa-angle-double-down"></i> </a>
+
     </div>
   </div>
 
-  <div class="movie-list">
+  <div class="movie-list" id="movie-list">
       <% @movies.sort_by { |x| x.movie_date.start_date}.reverse.each do |movie| %>
       <% unless movie == @movies.last %>
       <%= link_to movie_path(movie), class: "title" do %>
