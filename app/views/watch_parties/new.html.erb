@@ -1,8 +1,10 @@
-<%= simple_form_for(@watch_party) do |f| %>
-  <%= f.input :name %>
-  <%= f.association :movie %>
-  <%= f.input :content %>
-  <%= f.input :location %>
-  <%= f.input :date %>
-  <%= f.submit %>
-<% end %>
+<div class="form-party">
+    <%= simple_form_for(@watch_party) do |f| %>
+    <%= f.input :name %>
+    <%= f.association :movie %>
+    <%= f.input :content %>
+    <%= f.input :location %>
+    <%= f.input :date %>
+    <%= f.submit "Create Watch Party", class: "btn btn-primary"%>
+  <% end %>
+</div>
