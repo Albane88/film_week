@@ -4,7 +4,7 @@
       <div class= banner-all>
         <div class= "banner-box">
           <div class= "avatar">
-            <img class="rounded-circle" src="https://source.unsplash.com/random/200x200">
+            <%= cl_image_tag @watch_party.user.avatar.key, id: 'host-img' %>
           </div>
           <div class= "page-header">
             <h3> Hosted by <%= @watch_party.user.username %> </h3>
@@ -68,6 +68,9 @@
           </div>
           <div class= "movie-inf">
             <h3><b><%= @watch_party.movie.title %></b> </h3>
+            <p class="director">Director: <%= @watch_party.movie.director %></p>
+            <p class="year">Year: <%= @watch_party.movie.year %></p>
+            <p class="rating">Rating: <%= @watch_party.movie.rating %></p>
           </div>
         </div>
 
