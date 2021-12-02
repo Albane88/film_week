@@ -14,6 +14,8 @@ h1 {
 }
 
 h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
   justify-content: left;
 }
 
@@ -35,7 +37,7 @@ h2 {
 
 #banner {
   background-color: white;
-  height: 400px;
+  height: 350px;
   padding-top: 30px;
 }
 
@@ -44,6 +46,8 @@ h2 {
   flex-direction: row;
   padding: 50px 150px;
   gap: 200px;
+  width: 100%;
+  height: 100%;
 }
 
 .left-elements {
@@ -51,8 +55,8 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   padding-bottom: 50px;
-  border-radius: 20px;
   background-color: white;
+  width: 65%;
 }
 
 .content {
@@ -66,7 +70,6 @@ h2 {
 
 .attendees {
   margin-top: 50px;
-  margin-bottom: 100px;
   margin-left: 50px;
   margin-right: 50px;
   font-size: 20px;
@@ -105,11 +108,40 @@ h2 {
 }
 
 .right-elements {
-  border-radius: 20px;
-  background-color: white;
-  height: 600px;
-  position: sticky;
+ display: flex;
+ flex-direction: column;
+
 }
+
+.little-box-1 {
+  background-color: white;
+  height: 225px;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+.movie-img {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.movie-inf {
+   text-align: center;
+   margin-top: 70px;
+
+}
+.little-box-2 {
+  background-color: white;
+  height: 500px;
+  width: 600px;
+
+}
+
 
 .container {
   margin-top: 30px;
@@ -126,7 +158,6 @@ h2 {
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 20px;
   margin: 20px;
   align-items: center;
   justify-content: center;
@@ -138,5 +169,16 @@ h2 {
 }
 
 .chat-box {
-  margin-top: 50px;
+  padding: 50px;
+  width: 800px;
+}
+
+.my {
+  a {
+    text-decoration: none !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+
+  }
 }
