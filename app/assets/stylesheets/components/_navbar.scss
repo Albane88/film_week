@@ -21,8 +21,15 @@
 
 .avatar-default {
   background-color: white;
-  width: 25px;
-  height: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 60%;
+}
+
+.avatar-user {
+  border-radius: 60%;
+  width: 45px;
+  height: 45px;
 }
 
 .dropdown {
