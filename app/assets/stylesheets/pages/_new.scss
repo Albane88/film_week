@@ -1,0 +1,17 @@
+.form-party {
+  font-family: "Nunito",
+  "Helvetica",
+  "sans-serif";
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: whitesmoke;
+  width: 700px;
+  margin: 30px auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem
+}
