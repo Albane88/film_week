@@ -40,7 +40,7 @@
           </div>
 
           <%= simple_form_for [ @watch_party, @message ], remote: true do |f| %>
-            <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}" %>
+            <%= f.input :content, label: false, placeholder: "Message #{@watch_party.name}", input_html: { style: "width: auto;"} %>
             <%= f.button :submit, :label => 'Assign', class: "btn btn-default btn-primary" %>
           <% end %>
 
@@ -61,7 +61,7 @@
 
 
 
-    <div class= 'right-elements'>
+    <div class= 'right-elements ml-4'>
         <div class= little-box-1>
           <div class= "movie-img">
            <%= image_tag(@watch_party.movie.picture) %>
@@ -80,7 +80,7 @@
         <div class= little-box-2>
           <div class= map-info>
             <div id="map"
-              style="height: 350px;"
+              style="height: 350px; width: 23vw;"
               data-markers="<%= @markers.to_json %>"
               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
