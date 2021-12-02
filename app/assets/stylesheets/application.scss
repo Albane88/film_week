@@ -18,3 +18,12 @@
 @import "jquery-bar-rating/dist/themes/css-stars";
 @import "./pages/show";
 @import "./components/_cards.scss";
+
+a {
+    text-decoration: none !important;
+    color: white;
+    &:hover {
+      text-decoration: none !important;
+    }
+
+  }
