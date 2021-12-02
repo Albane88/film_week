@@ -19,6 +19,7 @@
 @import "./pages/show";
 @import "./components/_cards.scss";
 @import "./pages/new";
+@import "./pages/info_window";
 
 a {
     text-decoration: none !important;
@@ -28,7 +29,6 @@ a {
     }
 
   }
-
 
 html {
   scroll-behavior: smooth;
