@@ -23,7 +23,7 @@
     <% if current_user.avatar.attached? %>
       <%= cl_image_tag current_user.avatar.key %>
     <% else %>
-      <%= image_tag "favicon.ico" %>
+      <%= image_tag "avatardefault.png" %>
     <% end %>
 
     <div>
