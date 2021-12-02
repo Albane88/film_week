@@ -15,13 +15,13 @@
 }
 
 .trailer {
-  color: white;
-  text-decoration: none;
+  color: red;
+  text-decoration: underline !important;
 }
 
 .trailer:hover {
-  color: red;
-  text-decoration: none;
+  cursor: pointer;
+  color: white;
 }
 
 .movie-background h1 {
@@ -50,6 +50,7 @@
   display: flex;
   flex-direction: row;
   align-items: left;
+  justify-content: space-around;
 }
 
 .movie-info {

@@ -23,7 +23,7 @@
     <% if current_user.avatar.attached? %>
       <%= cl_image_tag current_user.avatar.key %>
     <% else %>
-      <%= image_tag "avatardefault.png" %>
+      <%= image_tag "avatardefault.png", class: 'avatar-default' %>
     <% end %>
 
     <div>
@@ -34,7 +34,7 @@
             <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
           <% else %>
             <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %></li>
-            <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link' %></li>
+            <li><%= link_to "Login", new_user_session_path, class: 'navbar-link' %></li>
           <% end %>
         </ul>
     </div>
