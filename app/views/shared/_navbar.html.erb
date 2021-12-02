@@ -21,7 +21,7 @@
 
   <div class="dropdown">
     <% if current_user.avatar.attached? %>
-      <%= cl_image_tag current_user.avatar.key %>
+      <%= cl_image_tag current_user.avatar.key, class: 'avatar-user' %>
     <% else %>
       <%= image_tag "avatardefault.png", class: 'avatar-default' %>
     <% end %>
