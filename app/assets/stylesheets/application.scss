@@ -18,6 +18,7 @@
 @import "jquery-bar-rating/dist/themes/css-stars";
 @import "./pages/show";
 @import "./components/_cards.scss";
+@import "./pages/new";
 
 a {
     text-decoration: none !important;
@@ -27,3 +28,9 @@ a {
     }
 
   }
+=======
+html {
+  scroll-behavior: smooth;
+}
+
+
