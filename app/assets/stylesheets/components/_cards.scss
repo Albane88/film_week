@@ -130,3 +130,15 @@ padding-top: 50px;
   text-align: left;
   color: white !important
 }
+
+.secondary {
+  color: #d50d0d;
+  background-color:#8b8282;
+  border: 2px solid #8b8282 !important;
+  border-radius: 20px;
+}
+
+.secondary:hover{
+  color: red;
+  background-color: white
+}
