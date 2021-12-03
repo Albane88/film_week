@@ -20,16 +20,21 @@
 
     </div>
   </div>
+  <div class="container-flud">
+    <div style="display: flex;
+      flex-wrap: wrap;" id="movie-list">
+        <% @movies.sort_by { |x| x.movie_date.start_date}.reverse.each do |movie| %>
+          <% unless movie == @movies.last %>
+            <div class="col-sm-12 col-md-4">
+              <%= link_to movie_path(movie), class: "title" do %>
+                <div class="card text-center" style="background-image: url('<%= image_path(movie.picture) %>');" data-image-url="<%= image_path(movie.picture) %>" data-dashboard-target="poster" data-action="mouseover->dashboard#showInfo mouseout->dashboard#hideInfo">
+                  <h2 class="d-none title"><%= movie.title %></h2>
+                </div>
+              <% end %>
+            </div>
 
-  <div class="movie-list" id="movie-list">
-      <% @movies.sort_by { |x| x.movie_date.start_date}.reverse.each do |movie| %>
-      <% unless movie == @movies.last %>
-      <%= link_to movie_path(movie), class: "title" do %>
-        <div class="card text-center" style="background-image: url('<%= image_path(movie.picture) %>');" data-image-url="<%= image_path(movie.picture) %>" data-dashboard-target="poster" data-action="mouseover->dashboard#showInfo mouseout->dashboard#hideInfo">
-          <h2 class="d-none title"><%= movie.title %></h2>
-        </div>
-         <% end %>
-        <% end %>
+          <% end %>
       <% end %>
+    </div>
   </div>
 </div>
